@@ -8,11 +8,11 @@ export default function HomePage() {
   return (
     <main className="fixed inset-0 overflow-hidden">
       <DotsBackground />
-      <div className="h-full w-full flex items-center justify-center relative z-10">
+      <div className="h-full w-full flex items-center justify-center relative z-10 px-4">
         <div
           onMouseEnter={() => setTerminalHovered(true)}
           onMouseLeave={() => setTerminalHovered(false)}
-          className={terminalHovered ? 'shadow-[0_0_32px_8px_rgba(34,213,238,0.4)] transition-all duration-300 rounded-xl' : 'transition-all duration-300 rounded-xl'}
+          className={`w-full max-w-xl ${terminalHovered ? 'shadow-[0_0_32px_8px_rgba(34,213,238,0.4)] transition-all duration-300 rounded-xl' : 'transition-all duration-300 rounded-xl'}`}
         >
           <Terminal />
         </div>

@@ -24,10 +24,22 @@ export default function DotsBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
   const frameRef = useRef<number>(0);
   const timeRef = useRef(0);
+  const isMobile = useRef(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      isMobile.current = window.innerWidth <= 768;
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setCursor({ x: e.clientX, y: e.clientY });
+      if (!isMobile.current) {
+        setCursor({ x: e.clientX, y: e.clientY });
+      }
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -59,14 +71,16 @@ export default function DotsBackground() {
     };
   }, []);
 
-  const numCols = Math.ceil(dimensions.w / DOT_GAP);
-  const numRows = Math.ceil(dimensions.h / DOT_GAP);
+  // Adjust dot gap for mobile devices
+  const effectiveDotGap = isMobile.current ? DOT_GAP * 1.5 : DOT_GAP;
+  const numCols = Math.ceil(dimensions.w / effectiveDotGap);
+  const numRows = Math.ceil(dimensions.h / effectiveDotGap);
 
   const dots = [];
   for (let row = 0; row < numRows; row++) {
     for (let col = 0; col < numCols; col++) {
-      const baseX = col * DOT_GAP + DOT_GAP / 2;
-      const baseY = row * DOT_GAP + DOT_GAP / 2;
+      const baseX = col * effectiveDotGap + effectiveDotGap / 2;
+      const baseY = row * effectiveDotGap + effectiveDotGap / 2;
       
       // Create wavy motion
       const waveOffset = Math.sin(baseX * WAVE_FREQUENCY + timeRef.current) * WAVE_AMPLITUDE;
@@ -88,9 +102,9 @@ export default function DotsBackground() {
             left: dotX - DOT_SIZE / 2,
             top: dotY - DOT_SIZE / 2,
             pointerEvents: 'none',
-            opacity,
-            transition: 'opacity 0.3s ease-out',
-            transform: `scale(${opacity * 0.5 + 0.5})`,
+            opacity: isMobile.current ? 0.4 : opacity,
+            transition: isMobile.current ? 'none' : 'opacity 0.3s ease-out',
+            transform: isMobile.current ? 'none' : `scale(${opacity * 0.5 + 0.5})`,
           }}
         />
       );
