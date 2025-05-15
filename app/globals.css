@@ -23,4 +23,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #171717; /* Equivalent to bg-neutral-900 */
+  color: #ffffff; /* Equivalent to text-white */
+  font-family: monospace; /* Equivalent to font-mono */
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s steps(1) infinite;
 }
