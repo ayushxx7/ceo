@@ -19,7 +19,8 @@ export default function Terminal() {
         $ 👋🏻 Hey, I'm <span className="text-white">Ashwin Kulkarni (^_^)</span>
       </p>
       <div className="h-2" />
-      <p className="text-green-400">$ 💼 Backend Developer | Open Source Contributor </p>
+      <p className="text-green-400">$ 💼 Software Engineer | Open Source Contributor </p>
+      <p className="text-green-400">$ 🏎️ Full-Throttle F1 Fan | 🎮 ETS2/ATS Player </p>
       <p className="text-green-400">$ 📍 Bangalore, India </p>
     </div>
   )
