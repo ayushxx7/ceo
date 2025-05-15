@@ -1,7 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { ReactNode } from 'react'
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from 'react-icons/md';
 import HomeOnlyEffects from '../components/HomeOnlyEffects';
 import Link from 'next/link';
@@ -36,7 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <div className="flex gap-8 font-mono text-green-400 text-2xl bg-neutral-900/80 rounded-full px-8 py-2 shadow-sm relative">
             <a href="https://github.com/AshwinKul28" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors cursor-pointer relative z-10"><FaGithub /></a>
             <a href="https://linkedin.com/in/iashwin28" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors cursor-pointer relative z-10"><FaLinkedin /></a>
-            <a href="https://twitter.com/AshwinKUlkarni4" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors cursor-pointer relative z-10"><FaTwitter /></a>
+            <a href="https://twitter.com/AshwinKUlkarni4" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors cursor-pointer relative z-10"><FaXTwitter /></a>
             <a href="mailto:ashwin.kulkarni128@gmail.com" className="hover:text-green-300 transition-colors cursor-pointer relative z-10"><MdEmail /></a>
           </div>
         </footer>

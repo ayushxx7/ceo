@@ -106,9 +106,11 @@ export default function AboutPage() {
             <p className="text-green-400 text-lg font-mono">$ whoami</p>
           </div>
           <p className="mt-2 text-white">
-            With a passion for innovation and a knack for solving complex problems, I thrive in the dynamic world of technology. As a Backend Developer and DevOps practitioner, I specialize in architecting large-scale, event-driven systems, mastering cloud technologies, and automating workflows. I'm a Certified Kubernetes Application Developer (CKAD) and Qiskit Advocate, deeply immersed in cloud-native solutions, microservices, and quantum computing.<br /><br />
-            My expertise spans in Gateways, REST API designing and implementations, Multiple SQL and NOSQL databases, Event Streams, and Microservices Architecture. I leverage bash scripting, Tekton, and Jenkins for cloud automation and CI/CD pipelines, and enjoy understanding and working on Open Source projects. I also explore quantum computing with Qiskit and IBMQ.<br /><br />
-            Beyond code, I share my knowledge through technical blogs and YouTube videos, highlighting underrated tech, project implementations, and unique hacks. Let's build, automate, and innovate together.
+            With a passion for innovation and a knack for solving complex problems, I thrive in the dynamic world of technology. As a Backend Developer and DevOps practitioner, I specialize in architecting large-scale, event-driven systems, mastering cloud technologies, and automating workflows. I'm a Certified Kubernetes Application Developer (CKAD) and a Qiskit Advocate, deeply immersed in cloud-native solutions, microservices, and quantum computing.<br /><br />
+            My expertise spans across API gateways, REST API design and implementation, multiple SQL and NoSQL databases, event streams, and microservices architecture. I leverage Bash scripting, Tekton, and Jenkins for cloud automation and CI/CD pipelines, and I enjoy working on and contributing to open source projects that drive real-world impact.<br /><br />
+            Outside of tech, I’m a motorsport enthusiast and a dedicated Formula 1 and cricket fan. When I’m not architecting systems or writing code, you’ll often find me relaxing behind the virtual wheel in Euro Truck Simulator and American Truck Simulator — a digital escape that fuels my love for long-haul journeys and logistics.<br /><br />
+            I also share my knowledge through technical blogs and YouTube videos, covering underrated technologies, real-world project implementations, and clever engineering hacks.<br /><br />
+            Let’s build, automate, and innovate — together.
           </p>
         </ShellBox>
 
