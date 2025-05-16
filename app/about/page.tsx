@@ -68,7 +68,7 @@ const toolGroups = [
 const sections = [
   { id: 'whoami', label: 'whoami' },
   { id: 'education', label: 'education' },
-  { id: 'tools', label: 'tools' },
+  { id: 'skills', label: 'skills' },
 ];
 
 const education = [
@@ -103,35 +103,37 @@ export default function AboutPage() {
         {/* Whoami Section */}
         <ShellBox id="whoami">
           <div className="flex justify-between items-center">
-            <p className="text-green-400 text-lg font-mono">$ whoami</p>
+            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ whoami</p>
           </div>
-          <p className="mt-2 text-white">
+          <p className="mt-2 text-white text-xs sm:text-sm md:text-base">
             With a passion for innovation and a knack for solving complex problems, I thrive in the dynamic world of technology. As a Backend Developer and DevOps practitioner, I specialize in architecting large-scale, event-driven systems, mastering cloud technologies, and automating workflows. I'm a Certified Kubernetes Application Developer (CKAD) and a Qiskit Advocate, deeply immersed in cloud-native solutions, microservices, and quantum computing.<br /><br />
             My expertise spans across API gateways, REST API design and implementation, multiple SQL and NoSQL databases, event streams, and microservices architecture. I leverage Bash scripting, Tekton, and Jenkins for cloud automation and CI/CD pipelines, and I enjoy working on and contributing to open source projects that drive real-world impact.<br /><br />
-            Outside of tech, I’m a motorsport enthusiast and a dedicated Formula 1 and cricket fan. When I’m not architecting systems or writing code, you’ll often find me relaxing behind the virtual wheel in Euro Truck Simulator and American Truck Simulator — a digital escape that fuels my love for long-haul journeys and logistics.<br /><br />
+            Outside of tech, I'm a motorsport enthusiast and a dedicated Formula 1 and cricket fan. When I'm not architecting systems or writing code, you'll often find me relaxing behind the virtual wheel in Euro Truck Simulator and American Truck Simulator — a digital escape that fuels my love for long-haul journeys and logistics.<br /><br />
             I also share my knowledge through technical blogs and YouTube videos, covering underrated technologies, real-world project implementations, and clever engineering hacks.<br /><br />
-            Let’s build, automate, and innovate — together.
+            Let's build, automate, and innovate — together.
           </p>
         </ShellBox>
 
         {/* Education Section */}
         <ShellBox id="education">
-          <p className="text-green-400">$ cat education.txt</p>
+          <div className="flex justify-between items-center">
+            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ cat education.txt</p>
+          </div>
           <div className="mt-6 space-y-6">
             {education.map((edu, index) => (
               <div key={index} className="text-white">
                 <div className="flex items-start gap-2">
-                  <span className="text-green-400 font-mono">[Edu]</span>
+                  <span className="text-green-400 font-mono text-xs sm:text-sm">[Edu]</span>
                   <div className="flex-1">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h3 className="text-lg font-semibold">{edu.degree}</h3>
-                        <p className="text-neutral-400">{edu.school}</p>
-                        <p className="text-neutral-400 text-sm">{edu.address}</p>
+                        <h3 className="text-sm sm:text-base md:text-lg font-semibold">{edu.degree}</h3>
+                        <p className="text-neutral-400 text-xs sm:text-sm">{edu.school}</p>
+                        <p className="text-neutral-400 text-xs sm:text-sm">{edu.address}</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-green-400">{edu.period}</p>
-                        <p className="text-neutral-400 text-sm">{edu.location}</p>
+                        <p className="text-green-400 text-xs sm:text-sm">{edu.period}</p>
+                        <p className="text-neutral-400 text-xs sm:text-sm">{edu.location}</p>
                       </div>
                     </div>
                   </div>
@@ -143,17 +145,19 @@ export default function AboutPage() {
 
 
         {/* Tools Section */}
-        <ShellBox id="tools">
-          <p className="text-green-400">$ echo "Tools & Technologies I use"</p>
+        <ShellBox id="skills">
+          <div className="flex justify-between items-center">
+            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ printenv | grep --skills</p>
+          </div>
           <div className="mt-3 space-y-4">
             {toolGroups.map(group => (
               <div key={group.label}>
-                <span className="text-green-400 font-mono"># {group.label}</span>
+                <span className="text-green-400 font-mono text-xs sm:text-sm"># {group.label}</span>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {group.items.map(item => (
                     <span
                       key={item.name}
-                      className={`bg-neutral-800/80 border ${item.color} rounded px-3 py-1 font-mono text-sm`}
+                      className={`bg-neutral-800/80 border ${item.color} rounded px-2 sm:px-3 py-0.5 sm:py-1 font-mono text-xs sm:text-sm`}
                     >
                       {item.name}
                     </span>

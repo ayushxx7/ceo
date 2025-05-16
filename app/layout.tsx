@@ -1,34 +1,38 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { ReactNode } from 'react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from 'react-icons/md';
-import HomeOnlyEffects from '../components/HomeOnlyEffects';
+import ParticleBackground from '../components/ParticleBackground';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'MacOS Dev Portfolio',
   description: 'Geeky portfolio inspired by MacOS',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
 }
+
+export const viewport = "width=device-width, initial-scale=1";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-neutral-950 min-h-screen flex flex-col">
-        <HomeOnlyEffects />
-        <nav className="w-full flex justify-center py-4 md:py-6 z-10 px-4">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-0 font-mono text-green-400 text-base md:text-lg bg-neutral-900/80 rounded-full px-4 md:px-8 py-2 shadow-sm overflow-hidden" data-menu="true">
-            <Link href="/" className="px-3 md:px-6 py-1 hover:text-green-300 transition-colors">home</Link>
+        <ParticleBackground />
+        <nav className="w-full flex justify-center py-2 sm:py-4 md:py-6 z-10 px-2 sm:px-4">
+          <div
+            className="flex flex-wrap justify-center gap-1 sm:gap-2 md:gap-0 font-mono text-green-400 text-xs sm:text-sm md:text-base bg-transparent px-2 sm:px-4 md:px-8 py-1 sm:py-2 overflow-hidden"
+            data-menu="true"
+          >
+            <Link href="/" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">home</Link>
             <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-            <Link href="/about" className="px-3 md:px-6 py-1 hover:text-green-300 transition-colors">about</Link>
+            <Link href="/about" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">about</Link>
             <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-            <Link href="/experience" className="px-3 md:px-6 py-1 hover:text-green-300 transition-colors">experience</Link>
+            <Link href="/experience" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">experience</Link>
             <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-            <Link href="/projects" className="px-3 md:px-6 py-1 hover:text-green-300 transition-colors">projects</Link>
+            <Link href="/projects" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">projects</Link>
             <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-            <Link href="/blog" className="px-3 md:px-6 py-1 hover:text-green-300 transition-colors">blog</Link>
+            <Link href="/blog" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">blog</Link>
           </div>
         </nav>
         <div className="flex-1 flex flex-col">
@@ -36,10 +40,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </div>
         <footer className="w-full flex justify-center mt-auto pb-4 md:pb-6 relative z-20 px-4">
           <div className="flex gap-4 md:gap-8 font-mono text-green-400 text-xl md:text-2xl bg-neutral-900/80 rounded-full px-6 md:px-8 py-2 shadow-sm relative">
+            <a href="mailto:ashwin.kulkarni128@gmail.com" className="hover:text-green-300 transition-colors cursor-pointer relative z-10"><MdEmail /></a>
             <a href="https://github.com/AshwinKul28" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors cursor-pointer relative z-10"><FaGithub /></a>
             <a href="https://linkedin.com/in/iashwin28" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors cursor-pointer relative z-10"><FaLinkedin /></a>
             <a href="https://twitter.com/AshwinKUlkarni4" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors cursor-pointer relative z-10"><FaXTwitter /></a>
-            <a href="mailto:ashwin.kulkarni128@gmail.com" className="hover:text-green-300 transition-colors cursor-pointer relative z-10"><MdEmail /></a>
+            <a href="https://www.youtube.com/@ashwin.kulkarni" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors cursor-pointer relative z-10"><FaYoutube /></a>
           </div>
         </footer>
       </body>
