@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function ParticleBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

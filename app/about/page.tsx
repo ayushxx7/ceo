@@ -1,4 +1,5 @@
 import ShellBox from "@/components/ShellBox";
+import Link from 'next/link';
 
 const toolGroups = [
   {
@@ -106,11 +107,11 @@ export default function AboutPage() {
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ whoami</p>
           </div>
           <p className="mt-2 text-white text-xs sm:text-sm md:text-base">
-            With a passion for innovation and a knack for solving complex problems, I thrive in the dynamic world of technology. As a Backend Developer and DevOps practitioner, I specialize in architecting large-scale, event-driven systems, mastering cloud technologies, and automating workflows. I'm a Certified Kubernetes Application Developer (CKAD) and a Qiskit Advocate, deeply immersed in cloud-native solutions, microservices, and quantum computing.<br /><br />
+            With a passion for innovation and a knack for solving complex problems, I thrive in the dynamic world of technology. As a Backend Developer and DevOps practitioner, I specialize in architecting large-scale, event-driven systems, mastering cloud technologies, and automating workflows. I&apos;m a Certified Kubernetes Application Developer (CKAD) and a Qiskit Advocate, deeply immersed in cloud-native solutions, microservices, and quantum computing.<br /><br />
             My expertise spans across API gateways, REST API design and implementation, multiple SQL and NoSQL databases, event streams, and microservices architecture. I leverage Bash scripting, Tekton, and Jenkins for cloud automation and CI/CD pipelines, and I enjoy working on and contributing to open source projects that drive real-world impact.<br /><br />
-            Outside of tech, I'm a motorsport enthusiast and a dedicated Formula 1 and cricket fan. When I'm not architecting systems or writing code, you'll often find me relaxing behind the virtual wheel in Euro Truck Simulator and American Truck Simulator — a digital escape that fuels my love for long-haul journeys and logistics.<br /><br />
+            Outside of tech, I&apos;m a motorsport enthusiast and a dedicated Formula 1 and cricket fan. When I&apos;m not architecting systems or writing code, you&apos;ll often find me relaxing behind the virtual wheel in Euro Truck Simulator and American Truck Simulator — a digital escape that fuels my love for long-haul journeys and logistics.<br /><br />
             I also share my knowledge through technical blogs and YouTube videos, covering underrated technologies, real-world project implementations, and clever engineering hacks.<br /><br />
-            Let's build, automate, and innovate — together.
+            Let&apos;s build, automate, and innovate — together.
           </p>
         </ShellBox>
 
@@ -169,12 +170,12 @@ export default function AboutPage() {
         </ShellBox>
 
         {/* Home Link */}
-        <a href="/" className="block text-green-400 hover:text-green-300 underline font-mono">$ cd /home</a>
+        <Link href="/" className="block text-green-400 hover:text-green-300 underline font-mono">$ cd /home</Link>
       </div>
 
       {/* Vertical Section Indicator - fixed to right center */}
       <div className="hidden lg:flex flex-col items-end gap-4 fixed right-0 top-1/2 -translate-y-1/2 z-50 pr-2">
-        {sections.map((section, index) => (
+        {sections.map((section) => (
           <div key={section.id} className="flex items-center gap-2 group">
             <a 
               href={`#${section.id}`}

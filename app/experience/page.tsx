@@ -1,6 +1,7 @@
 'use client';
 import ShellBox from "@/components/ShellBox";
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Experience {
   title: string;
@@ -11,14 +12,6 @@ interface Experience {
   technologies: { name: string; color: string }[];
   label: string;
   logo: string;
-}
-
-interface Education {
-  degree: string;
-  school: string;
-  period: string;
-  location: string;
-  address: string;
 }
 
 interface OpenSource {
@@ -296,12 +289,12 @@ export default function ExperiencePage() {
         
 
         {/* Home Link */}
-        <a href="/" className="block text-green-400 hover:text-green-300 underline font-mono">$ cd /home</a>
+        <Link href="/" className="block text-green-400 hover:text-green-300 underline font-mono">$ cd /home</Link>
       </div>
 
                   {/* Vertical Section Indicator - fixed to right center */}
       <div className="hidden lg:flex flex-col items-end gap-4 fixed right-0 top-1/2 -translate-y-1/2 z-50 pr-2">
-        {sections.map((section, index) => (
+        {sections.map((section) => (
           <div key={section.id} className="flex items-center gap-2 group">
             <a 
               href={`#${section.id}`}
