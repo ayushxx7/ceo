@@ -52,7 +52,7 @@ export default function NavBar() {
         <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
         <Link href="/projects" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-200 transition-colors whitespace-nowrap">projects</Link>
         <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-        <Link href="/blog" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-200 transition-colors whitespace-nowrap">blog</Link>
+        <Link href="/shelf" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-200 transition-colors whitespace-nowrap">digital shelf</Link>
       </div>
       {/* Hamburger Icon for Mobile */}
       <button
@@ -72,7 +72,7 @@ export default function NavBar() {
           <Link href="/experience" className="py-2 px-4 w-full text-center text-green-400 font-mono hover:bg-neutral-900/50 hover:text-green-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>experience</Link>
           <Link href="/accomplishments" className="py-2 px-4 w-full text-center text-green-400 font-mono hover:bg-neutral-900/50 hover:text-green-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>accomplishments</Link>
           <Link href="/projects" className="py-2 px-4 w-full text-center text-green-400 font-mono hover:bg-neutral-900/50 hover:text-green-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>projects</Link>
-          <Link href="/blog" className="py-2 px-4 w-full text-center text-green-400 font-mono hover:bg-neutral-900/50 hover:text-green-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>blog</Link>
+          <Link href="/shelf" className="py-2 px-4 w-full text-center text-green-400 font-mono hover:bg-neutral-900/50 hover:text-green-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>digital shelf</Link>
         </div>
       )}
     </nav>

@@ -11,10 +11,20 @@ interface Accomplishment {
   description: string;
   date: string;
   category: string;
-  color: string;
   badge?: string;
 }
 
+// Category to color mapping
+const categoryColors: { [key: string]: string } = {
+  'certification': 'text-blue-400 border-blue-400',
+  'award': 'text-yellow-400 border-yellow-400',
+  'outreach': 'text-indigo-400 border-indigo-400',
+  'hackathon': 'text-pink-500 border-pink-500',
+  'recognition': 'text-yellow-300 border-yellow-300',
+  'open source': 'text-orange-300 border-orange-300',
+  'patent': 'text-red-400 border-red-400',
+  'default': 'text-green-400 border-green-400',
+};
 
 const accomplishments: Accomplishment[] = [
     {
@@ -23,7 +33,6 @@ const accomplishments: Accomplishment[] = [
         description: "Achieved success in the CKAD exam securing my certification in the first attempt hosted by CNCF 🚀. Mastering Kubernetes has proven invaluable, especially as I've seamlessly applied these concepts in my daily work.",
         date: "2024",
         category: "certification",
-        color: "text-blue-400 border-blue-400",
         badge: "https://www.credly.com/badges/40905612-70bb-43f9-a4a9-388a88687997/public_url"
     },
     {
@@ -32,7 +41,6 @@ const accomplishments: Accomplishment[] = [
         description: "Received the OTA Award for the Email Delivery feature we shipped earlier this year. Deep dive into tech with legacy Postfix, SMTP, Apache SpamAssassin, custom queues, and Golang—all running on Red Hat UBI images!",
         date: "2024",
         category: "award",
-        color: "text-yellow-400 border-yellow-400"
     },
     {
         id: 3,
@@ -40,7 +48,6 @@ const accomplishments: Accomplishment[] = [
         description: "IBM welcomed NHCE students and faculty for a cloud-focused industry visit. Privileged to share cloud expertise with 40+ participants. Thanks to co-speakers and organizers for the amazing experience.",
         date: "2024",
         category: "outreach",
-        color: "text-indigo-400 border-indigo-400"
     },
     {
         id: 4,
@@ -48,7 +55,6 @@ const accomplishments: Accomplishment[] = [
         description: "Hosted a webinar to highlight the booming opportunities in cloud computing. Covered topics like market growth, in-demand roles, skillsets, and career strategies.",
         date: "2024",
         category: "outreach",
-        color: "text-rose-400 border-rose-400"
     },
     {
         id: 5,
@@ -56,7 +62,6 @@ const accomplishments: Accomplishment[] = [
         description: "Top 15 out of 100+ teams at IBM Cloud Ideafest Hackathon. Built a productivity summarizer powered by LLMs and prompt engineering. Great appreciation and amazing event at Taj Vivanta, Bangalore!",
         date: "2024",
         category: "hackathon",
-        color: "text-pink-500 border-pink-500"
     },
     {
         id: 6,
@@ -64,7 +69,6 @@ const accomplishments: Accomplishment[] = [
         description: "Incredible experience at IBM Tech 2024 in Dubai. Engaged with global peers on Cloud, Quantum, and AI. Grateful to hear leaders like Dario Gil and Rob Thomas live.",
         date: "2024",
         category: "outreach",
-        color: "text-lime-400 border-lime-400"
     },
     {
         id: 7,
@@ -72,7 +76,6 @@ const accomplishments: Accomplishment[] = [
         description: "Recognized at IBM's Gratitude 2023 event for university guest lecturing. Received memento from Sandip Patel. Honored to contribute to student growth and learning.",
         date: "2023",
         category: "recognition",
-        color: "text-yellow-300 border-yellow-300"
     },
     {
         id: 8,
@@ -80,7 +83,6 @@ const accomplishments: Accomplishment[] = [
         description: "Wrapped up Hacktoberfest contributing to open source in GoLang and Rust. 5 successful PRs, digital rewards, tree planted, and immense learning.",
         date: "2023",
         category: "open source",
-        color: "text-orange-300 border-orange-300"
     },
     {
         id: 9,
@@ -88,7 +90,6 @@ const accomplishments: Accomplishment[] = [
         description: "Engaged in hands-on activities and discussions about cloud computing with final-year CSE and ISA students. Positive feedback and great interaction with the Dean.",
         date: "2023",
         category: "outreach",
-        color: "text-blue-300 border-blue-300"
     },
     {
         id: 10,
@@ -96,7 +97,6 @@ const accomplishments: Accomplishment[] = [
         description: "Strong foundation in quantum computing and Qiskit SDK. Created and executed quantum programs on IBM Quantum systems.",
         date: "2023",
         category: "certification",
-        color: "text-blue-400 border-blue-400",
         badge: "https://www.credly.com/badges/cd6f1e51-eb03-4c39-bca9-5ed5b0a6a570/public_url"
     },
     {
@@ -105,7 +105,6 @@ const accomplishments: Accomplishment[] = [
         description: "Deep involvement with Qiskit. Extensive understanding of circuits, simulators, and quantum algorithms. Active community contributions.",
         date: "2023",
         category: "certification",
-        color: "text-purple-400 border-purple-400",
         badge: "https://www.credly.com/badges/7d4d67bd-4885-4c3f-b746-3705801d343f/public_url"
     },
     {
@@ -114,7 +113,6 @@ const accomplishments: Accomplishment[] = [
         description: "Hands-on labs with Qiskit. Bridged theory and real-world implementation using physics, math, and Python.",
         date: "2023",
         category: "certification",
-        color: "text-green-400 border-green-400",
         badge: "https://www.credly.com/badges/44a7d57d-1f3d-458e-8947-1533a940111f/public_url"
     },
     {
@@ -123,7 +121,6 @@ const accomplishments: Accomplishment[] = [
         description: "Articulated quantum computing applications and IBM Quantum's offerings. Learned effective communication for industry-focused messaging.",
         date: "2023",
         category: "certification",
-        color: "text-emerald-400 border-emerald-400",
         badge: "https://www.credly.com/badges/aa358ab7-1609-4d4a-a62f-ff3dad6a2637/public_url"
     },
     {
@@ -132,7 +129,6 @@ const accomplishments: Accomplishment[] = [
         description: "Member of a special interest group discussing and demonstrating POCs around cloud q-safe terminologies.",
         date: "2023",
         category: "outreach",
-        color: "text-fuchsia-400 border-fuchsia-400"
     },
     {
         id: 15,
@@ -140,7 +136,6 @@ const accomplishments: Accomplishment[] = [
         description: "Mentee in Fall 2022 cohort. Worked with a mentor on a 3-month part-time quantum computing project.",
         date: "2022",
         category: "outreach",
-        color: "text-cyan-400 border-cyan-400",
         badge: "https://www.credly.com/badges/5dda18e1-23a3-4ac8-a3f7-bfdc3a97f0f9/public_url"
     },
     {
@@ -149,7 +144,6 @@ const accomplishments: Accomplishment[] = [
         description: "Top contributor in Qiskit Localization Summer Sprint 2022. Recognized with swag for meaningful contributions.",
         date: "2022",
         category: "open source",
-        color: "text-orange-400 border-orange-400"
     },
     {
         id: 17,
@@ -158,7 +152,6 @@ const accomplishments: Accomplishment[] = [
         badge: "https://patents.google.com/patent/US20240087240A1",
         date: "2024",
         category: "patent",
-        color: "text-red-400 border-red-400"
     },
     {
         id: 18,
@@ -166,7 +159,6 @@ const accomplishments: Accomplishment[] = [
         description: "Constructed quantum gates and circuits. Showcased strong foundational knowledge of quantum algorithms.",
         date: "2020",
         category: "outreach",
-        color: "text-pink-400 border-pink-400",
         badge: "https://www.credly.com/badges/13c44834-e0a7-4734-b0fc-8fa53aa5f278/public_url"
     }
     ];
@@ -240,7 +232,8 @@ export default function Accomplishments() {
                     <option
                         key={category}
                         value={category}
-                        className="bg-neutral-900 text-cyan-400 font-mono"
+                        className={`bg-neutral-800/80 border  text-cyan-400 rounded px-2 sm:px-3 py-0.5 sm:py-1 font-mono text-xs sm:text-sm`}
+                        
                     >
                         {category}
                     </option>
@@ -255,33 +248,27 @@ export default function Accomplishments() {
             {currentAccomplishments.map((accomplishment) => (
               <div 
                 key={accomplishment.id}
-                className="bg-neutral-900/50 p-3 sm:p-4 rounded-lg border border-neutral-800 hover:border-green-400/50 transition-colors"
+                className="bg-neutral-900/50 p-4 sm:p-5 rounded-lg border border-neutral-800 hover:border-green-400/50 transition-colors flex flex-col justify-between min-h-[180px]"
               >
-                <div className="flex flex-col gap-1 sm:gap-2">
-                  <div className="flex items-start justify-between gap-2">
-                    <h3 className={`text-sm sm:text-base font-medium ${accomplishment.color}`}>
-                      {accomplishment.title}
-                    </h3>
-                    {accomplishment.badge && (
-                      <a
-                        href={accomplishment.badge}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs sm:text-sm text-green-400 hover:text-green-300 transition-colors"
-                      >
-                        [badge]
-                      </a>
-                    )}
-                  </div>
-                  <p className="text-xs sm:text-sm text-neutral-400">
-                    {accomplishment.description}
-                  </p>
-                  <div className="flex items-center justify-between mt-1">
-                    <span className="text-xs text-neutral-500">{accomplishment.date}</span>
-                    <span className={`text-xs px-2 py-0.5 rounded-full border ${accomplishment.color}`}>
-                      {accomplishment.category}
-                    </span>
-                  </div>
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-green-400 font-mono font-bold text-base sm:text-lg">{accomplishment.title}</h3>
+                  <span className="text-xs text-green-400 font-mono font-semibold">{accomplishment.date}</span>
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-300 mb-4">{accomplishment.description}</p>
+                <div className="flex items-end justify-between mt-auto">
+                  <span className={`px-2 sm:px-3 py-0.5 sm:py-1 bg-neutral-800/80 border font-mono text-xs sm:text-sm rounded-md ${categoryColors[accomplishment.category.toLowerCase()] || categoryColors.default}`}>
+                    {accomplishment.category}
+                  </span>
+                  {accomplishment.badge && (
+                    <a
+                      href={accomplishment.badge}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs sm:text-sm text-green-400 hover:text-green-300 transition-colors font-mono"
+                    >
+                      [badge]
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
