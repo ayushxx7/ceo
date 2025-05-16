@@ -144,7 +144,6 @@ export default function AboutPage() {
           </div>
         </ShellBox>
 
-
         {/* Tools Section */}
         <ShellBox id="skills">
           <div className="flex justify-between items-center">
@@ -169,8 +168,12 @@ export default function AboutPage() {
           </div>
         </ShellBox>
 
-        {/* Home Link */}
-        <Link href="/" className="block text-green-400 hover:text-green-300 underline font-mono">$ cd /home</Link>
+        <ShellBox>
+          {/* Home Link */}
+            <Link href="/" className="text-green-400 text-sm sm:text-base md:text-lg font-mono">
+              $ cd /home
+            </Link>
+        </ShellBox>
       </div>
 
       {/* Vertical Section Indicator - fixed to right center */}

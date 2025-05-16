@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from 'react-icons/md';
 import ParticleBackground from '../components/ParticleBackground';
-import Link from 'next/link';
+import NavBar from '../components/NavBar';
 
 export const metadata: Metadata = {
   title: 'Ashwin Kulkarni',
@@ -19,22 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="bg-neutral-950 min-h-screen flex flex-col">
         <ParticleBackground />
-        <nav className="w-full flex justify-center py-2 sm:py-4 md:py-6 z-10 px-2 sm:px-4">
-          <div
-            className="flex flex-wrap justify-center gap-1 sm:gap-2 md:gap-0 font-mono text-green-400 text-xs sm:text-sm md:text-base bg-transparent px-2 sm:px-4 md:px-8 py-1 sm:py-2 overflow-hidden"
-            data-menu="true"
-          >
-            <Link href="/" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">home</Link>
-            <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-            <Link href="/about" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">about</Link>
-            <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-            <Link href="/experience" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">experience</Link>
-            <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-            <Link href="/projects" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">projects</Link>
-            <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-            <Link href="/blog" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">blog</Link>
-          </div>
-        </nav>
+        <NavBar />
         <div className="flex-1 flex flex-col">
           {children}
         </div>

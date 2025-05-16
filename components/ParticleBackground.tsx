@@ -104,7 +104,7 @@ export default function ParticleBackground() {
 
     // Create particles
     const particles: Particle[] = [];
-    const particleCount = Math.min(100, Math.floor((canvas.width * canvas.height) / 5000));
+    const particleCount = Math.min(300, Math.floor((canvas.width * canvas.height) /10000));
 
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
@@ -129,7 +129,7 @@ export default function ParticleBackground() {
 
           if (distance < 100) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(34, 197, 94, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(34, 197, 94, ${0.2 * (1 - distance / 100)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(particles[j].x, particles[j].y);

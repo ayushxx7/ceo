@@ -286,13 +286,15 @@ export default function ExperiencePage() {
           </div>
         </ShellBox>
 
-        
-
-        {/* Home Link */}
-        <Link href="/" className="block text-green-400 hover:text-green-300 underline font-mono">$ cd /home</Link>
+        <ShellBox>
+          {/* Home Link */}
+          <Link href="/" className="text-green-400 text-sm sm:text-base md:text-lg font-mono">
+              $ cd /home
+            </Link>
+        </ShellBox>
       </div>
 
-                  {/* Vertical Section Indicator - fixed to right center */}
+      {/* Vertical Section Indicator - fixed to right center */}
       <div className="hidden lg:flex flex-col items-end gap-4 fixed right-0 top-1/2 -translate-y-1/2 z-50 pr-2">
         {sections.map((section) => (
           <div key={section.id} className="flex items-center gap-2 group">
@@ -306,7 +308,6 @@ export default function ExperiencePage() {
           </div>
         ))}
       </div>
-
     </div>
   );
 } 
