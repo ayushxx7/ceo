@@ -100,7 +100,7 @@ export default function AboutPage() {
   return (
     <div className="flex justify-center relative">
       {/* Main Content */}
-      <div className="flex-1 max-w-2xl space-y-6">
+      <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6">
         {/* Whoami Section */}
         <ShellBox id="whoami">
           <div className="flex justify-between items-center">

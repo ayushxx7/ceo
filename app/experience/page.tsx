@@ -177,7 +177,7 @@ const sections = [
 export default function ExperiencePage() {
   return (
     <div className="flex justify-center relative">
-      <div className="flex-1 max-w-2xl space-y-6">
+      <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6">
         {/* Work Experience Section */}
         <ShellBox id="experience">
           <div className="flex justify-between items-center">
