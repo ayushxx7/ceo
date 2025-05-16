@@ -21,6 +21,7 @@ export default function Terminal() {
   const [displayText, setDisplayText] = useState('')
   const [isTyping, setIsTyping] = useState(true)
   const [showCursor, setShowCursor] = useState(true)
+  const [isComplete, setIsComplete] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => setShowCursor(c => !c), 500)
@@ -28,7 +29,13 @@ export default function Terminal() {
   }, [])
 
   useEffect(() => {
-    if (currentLine >= LINES.length) return
+    if (currentLine >= LINES.length) {
+      // Add a small delay before showing the glow
+      setTimeout(() => {
+        setIsComplete(true)
+      }, 500)
+      return
+    }
 
     const line = LINES[currentLine]
     if (line.typing) {
@@ -61,7 +68,9 @@ export default function Terminal() {
   }, [currentLine])
 
   return (
-    <div className="bg-black border border-green-500 p-4 sm:p-6 rounded-md w-full max-w-xl shadow-xl">
+    <div className={`bg-black border border-green-500 p-4 sm:p-6 rounded-md w-full max-w-xl shadow-xl transition-all duration-500 ${
+      isComplete ? 'shadow-[0_0_32px_8px_rgba(34,213,238,0.4)]' : ''
+    }`}>
       {LINES.map((line, index) => (
         <div key={index}>
           {index === currentLine ? (

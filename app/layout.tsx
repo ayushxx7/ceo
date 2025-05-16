@@ -16,11 +16,11 @@ export const viewport = "width=device-width, initial-scale=1";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="h-full">
-      <body className="bg-neutral-950 h-full flex flex-col overflow-hidden">
+    <html lang="en">
+      <body className="bg-neutral-950 min-h-screen flex flex-col">
         <ParticleBackground />
         <NavBar />
-        <div className="flex-1 flex flex-col overflow-y-auto">
+        <div className="flex-1 flex flex-col">
           {children}
         </div>
         <footer className="w-full flex flex-col items-center mt-auto pb-4 md:pb-6 relative z-20 px-4">
