@@ -39,7 +39,7 @@ export default function NavBar() {
   }
 
   return (
-    <nav className="w-full flex justify-center py-2 sm:py-4 md:py-6 z-10 px-2 sm:px-4 relative">
+    <nav className="w-full flex justify-center py-2 sm:py-4 md:py-6 z-50 px-2 sm:px-4 relative">
       {/* Desktop Nav */}
       <div className="hidden md:flex flex-wrap justify-center gap-1 sm:gap-2 md:gap-0 font-mono text-green-400 text-xs sm:text-sm md:text-base bg-neutral-900/30 backdrop-blur-sm px-2 sm:px-4 md:px-8 py-1 sm:py-2 overflow-hidden rounded-full" data-menu="true">
         <Link href="/" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-200 transition-colors whitespace-nowrap">home</Link>
@@ -66,7 +66,7 @@ export default function NavBar() {
       </button>
       {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-neutral-900/30 backdrop-blur-sm border-b border-green-400/20 shadow-lg z-50 flex flex-col items-center py-4 md:hidden animate-fade-in">
+        <div className="absolute top-full left-0 w-full bg-neutral-900/30 backdrop-blur-sm border-b border-green-400/20 shadow-lg z-[60] flex flex-col items-center py-4 md:hidden animate-fade-in">
           <Link href="/" className="py-2 px-4 w-full text-center text-green-400 font-mono hover:bg-neutral-900/50 hover:text-green-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>home</Link>
           <Link href="/about" className="py-2 px-4 w-full text-center text-green-400 font-mono hover:bg-neutral-900/50 hover:text-green-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>about</Link>
           <Link href="/experience" className="py-2 px-4 w-full text-center text-green-400 font-mono hover:bg-neutral-900/50 hover:text-green-300 transition-colors" onClick={() => setMobileMenuOpen(false)}>experience</Link>

@@ -151,8 +151,8 @@ const DigitalShelf = () => {
   ];
 
   return (
-    <div className="flex justify-center relative">
-      <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6">
+    <div className="flex justify-center relative min-h-screen overflow-x-hidden">
+      <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6 py-20">
         {/* YouTube Section */}
         <ShellBox id="videos">
           <div className="flex justify-between items-center">
@@ -320,23 +320,22 @@ const DigitalShelf = () => {
             $ cd /home
           </Link>
         </ShellBox>
-      </div>
 
-            {/* Vertical Section Indicator - fixed to right center */}
-        <div className="hidden lg:flex flex-col items-end gap-4 fixed right-0 top-1/2 -translate-y-1/2 z-50 pr-2">
-        {sections.map((section) => (
+        {/* Vertical Section Indicator - fixed to right center */}
+        <div className="hidden lg:flex flex-col items-end gap-4 fixed right-0 top-1/2 -translate-y-1/2 z-10 pr-2">
+          {sections.map((section) => (
             <div key={section.id} className="flex items-center gap-2 group">
-            <a 
+              <a 
                 href={`#${section.id}`}
                 className="text-green-400/40 group-hover:text-green-400 font-mono text-base transition-colors"
-            >
+              >
                 {section.label}
-            </a>
-            <div className="w-0.5 h-8 bg-green-400/40 group-hover:bg-green-400 transition-colors"></div>
+              </a>
+              <div className="w-0.5 h-8 bg-green-400/40 group-hover:bg-green-400 transition-colors"></div>
             </div>
-        ))}
+          ))}
         </div>
-
+      </div>
     </div>
   );
 };
