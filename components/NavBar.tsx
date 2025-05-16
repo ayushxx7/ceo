@@ -42,17 +42,17 @@ export default function NavBar() {
     <nav className="w-full flex justify-center py-2 sm:py-4 md:py-6 z-10 px-2 sm:px-4 relative">
       {/* Desktop Nav */}
       <div className="hidden md:flex flex-wrap justify-center gap-1 sm:gap-2 md:gap-0 font-mono text-green-400 text-xs sm:text-sm md:text-base bg-neutral-900/30 backdrop-blur-sm px-2 sm:px-4 md:px-8 py-1 sm:py-2 overflow-hidden rounded-full" data-menu="true">
-        <Link href="/" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">home</Link>
+        <Link href="/" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-200 transition-colors whitespace-nowrap">home</Link>
         <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-        <Link href="/about" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">about</Link>
+        <Link href="/about" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-200 transition-colors whitespace-nowrap">about</Link>
         <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-        <Link href="/experience" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">experience</Link>
+        <Link href="/experience" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-200 transition-colors whitespace-nowrap">experience</Link>
         <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-        <Link href="/accomplishments" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">accomplishments</Link>
+        <Link href="/accomplishments" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-200 transition-colors whitespace-nowrap">accomplishments</Link>
         <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-        <Link href="/projects" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">projects</Link>
+        <Link href="/projects" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-200 transition-colors whitespace-nowrap">projects</Link>
         <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-        <Link href="/blog" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">blog</Link>
+        <Link href="/blog" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-200 transition-colors whitespace-nowrap">blog</Link>
       </div>
       {/* Hamburger Icon for Mobile */}
       <button
