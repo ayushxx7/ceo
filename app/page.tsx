@@ -7,8 +7,8 @@ export default function HomePage() {
   const [terminalHovered, setTerminalHovered] = useState(false);
 
   return (
-    <main className="min-h-[calc(100vh-12rem)] h-full flex items-center justify-center overflow-hidden">
-      <div className="w-full flex items-center justify-center relative z-10 px-4">
+    <main className="flex flex-col flex-1 min-h-[calc(100vh-12rem)] w-full items-center justify-center">
+      <div className="w-full flex items-center justify-center relative z-10 px-4 flex-1">
         <div
           onMouseEnter={() => setTerminalHovered(true)}
           onMouseLeave={() => setTerminalHovered(false)}
