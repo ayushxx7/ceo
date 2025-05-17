@@ -56,7 +56,7 @@ const experiences: Experience[] = [
   {
     title: "Senior Software Engineer",
     company: "IBM, India Software Labs",
-    period: "Jul 2020 - Jun 2025",
+    period: "Jul 2020 - Present",
     location: "Bangalore, India",
     description: [
       "Architected and developed large-scale, event-driven systems using Go and microservices architecture",
