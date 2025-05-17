@@ -11,8 +11,10 @@ const LINES = [
     typing: false,
     highlight: { text: 'Ashwin Kulkarni', suffix: ' (^_^)' }
   },
-  { prefix: '$ 💼', text: 'Software Engineer | 💻 Open Source Contributor', emoji: '', typing: false },
-  { prefix: '$ 🏎️', text: 'Full-Throttle F1 Fan | 🎮 ETS2/ATS Player', emoji: '', typing: false },
+  { prefix: '$ 💼', text: 'Software Engineer', emoji: '', typing: false },
+  { prefix: '$ 💻', text: 'Open Source Contributor', emoji: '', typing: false },
+  { prefix: '$ 🏎️', text: 'Full-Throttle F1 Fan', emoji: '', typing: false },
+  { prefix: '$ 🎮', text: 'ETS2/ATS Player', emoji: '', typing: false },
   { prefix: '$ 🇮🇳', text: 'Bangalore, India', emoji: '', typing: false },
 ]
 
@@ -21,21 +23,28 @@ export default function Terminal() {
   const [displayText, setDisplayText] = useState('')
   const [isTyping, setIsTyping] = useState(true)
   const [showCursor, setShowCursor] = useState(true)
-  const [isComplete, setIsComplete] = useState(false)
+  const [showGlow, setShowGlow] = useState(false)
 
+  // Cursor blinking effect
   useEffect(() => {
     const interval = setInterval(() => setShowCursor(c => !c), 500)
     return () => clearInterval(interval)
   }, [])
 
+  // Trigger bright glow after the last line is displayed
   useEffect(() => {
-    if (currentLine >= LINES.length) {
-      // Add a small delay before showing the glow
-      setTimeout(() => {
-        setIsComplete(true)
-      }, 500)
-      return
+    if (currentLine === LINES.length - 1 && !isTyping) {
+      setShowGlow(true)
+      const timeout = setTimeout(() => {
+        setShowGlow(false)
+      }, 1000) // Bright glow for 1 second
+      return () => clearTimeout(timeout)
     }
+  }, [currentLine, isTyping])
+
+  // Typing effect
+  useEffect(() => {
+    if (currentLine >= LINES.length) return
 
     const line = LINES[currentLine]
     if (line.typing) {
@@ -49,7 +58,6 @@ export default function Terminal() {
         } else {
           setIsTyping(false)
           clearInterval(interval)
-          // Wait a bit before moving to next line
           setTimeout(() => {
             setCurrentLine(prev => prev + 1)
           }, 500)
@@ -58,7 +66,6 @@ export default function Terminal() {
 
       return () => clearInterval(interval)
     } else {
-      // For non-typing lines, show them immediately
       setDisplayText(line.text)
       setIsTyping(false)
       setTimeout(() => {
@@ -67,10 +74,25 @@ export default function Terminal() {
     }
   }, [currentLine])
 
+  // Calculate dynamic shadow for gradual glow
+  let dynamicShadow = ''
+  if (showGlow) {
+    dynamicShadow = '0 0 32px 8px rgba(34,213,238,0.4)'
+  } else if (currentLine > 0 && currentLine < LINES.length) {
+    // Progress from subtle to bright
+    const progress = currentLine / (LINES.length - 1)
+    // Interpolate shadow size and opacity
+    const blur = 16 + 16 * progress // 16px to 32px
+    const spread = 2 + 6 * progress // 2px to 8px
+    const alpha = 0.15 + 0.25 * progress // 0.15 to 0.4
+    dynamicShadow = `0 0 ${blur}px ${spread}px rgba(34,213,238,${alpha})`
+  }
+
   return (
-    <div className={`bg-black border border-green-500 p-4 sm:p-6 rounded-md w-full max-w-xl shadow-xl transition-all duration-500 ${
-      isComplete ? 'shadow-[0_0_32px_8px_rgba(34,213,238,0.4)]' : ''
-    }`}>
+    <div
+      className={`bg-black border border-green-500 p-4 sm:p-6 rounded-md w-full max-w-xl shadow-xl transition-all duration-500 hover:shadow-[0_0_32px_8px_rgba(34,213,238,0.4)]`}
+      style={dynamicShadow ? { boxShadow: dynamicShadow } : {}}
+    >
       {LINES.map((line, index) => (
         <div key={index}>
           {index === currentLine ? (
