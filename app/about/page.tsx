@@ -78,21 +78,24 @@ const education = [
     school: "Indian Institute of Technology, Guwahati",
     period: "2018 - 2020",
     location: "Guwahati, India",
-    address: "Assam, India (781039)"
+    address: "Assam, India (781039)",
+    type: "mtech"
   },
   {
     degree: "Bachelor of Engineering in Computer Science",
     school: "Government College of Engineering, Aurangabad",
     period: "2014 - 2018",
     location: "Aurangabad, India",
-    address: "Maharashtra, India (431005)"
+    address: "Maharashtra, India (431005)",
+    type: "be"
   },
   {
     degree: "Higher Secondary Education (10+2)",
     school: "Saraswati Bhuvan High School",
     period: "2012 - 2014",
     location: "Ch. Sambhajinagar, India",
-    address: "Maharashtra, India (431001)"
+    address: "Maharashtra, India (431001)",
+    type: "hsc"
   }
 ];
 
@@ -124,7 +127,9 @@ export default function AboutPage() {
             {education.map((edu, index) => (
               <div key={index} className="text-white">
                 <div className="flex items-start gap-2">
-                  <span className="text-green-400 font-mono text-xs sm:text-sm">[Edu]</span>
+                <span className="text-green-400 font-mono text-xs sm:text-sm w-20 inline-block">
+                  [{edu.type.toUpperCase()}]
+                </span>
                   <div className="flex-1">
                     <div className="flex justify-between items-start">
                       <div>
