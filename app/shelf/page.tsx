@@ -146,92 +146,15 @@ const DigitalShelf = () => {
   );
 
   const sections = [
-    { id: 'videos', label: 'videos' },
     { id: 'blogs', label: 'blogs' },
+    { id: 'videos', label: 'videos' },
   ];
 
   return (
     <div className="flex justify-center relative min-h-screen overflow-x-hidden">
       <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6 py-20">
-        {/* YouTube Section */}
-        <ShellBox id="videos">
-          <div className="flex justify-between items-center">
-            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/videos</p>
-          </div>
-          <div className="mt-8">
-            {loading ? (
-              <div className="text-green-400 text-center py-8">Loading videos...</div>
-            ) : error ? (
-                <div className="text-red-400 text-center py-8">
-                    🐢 Hmm... that took a wrong turn: {error}
-                    <p className="text-sm mt-2 text-neutral-400">
-                      Let&apos;s try that again. Maybe the internet turtles are tired 🐢💤
-                    </p>
-                </div>
-            ) : videos.length === 0 ? (
-              <div className="text-green-400 text-center py-8">No videos found</div>
-            ) : (
-              <>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                  {paginatedVideos.map((video) => (
-                    <YouTubeVideo
-                      key={video.id}
-                      videoId={video.id}
-                      title={video.title}
-                      publishedAt={video.publishedAt}
-                    />
-                  ))}
-                </div>
-                
-                {/* Video Pagination */}
-                <div className="flex justify-center items-center gap-2 sm:gap-4 mt-6">
-                  <button
-                    onClick={() => setCurrentVideoPage(p => Math.max(1, p - 1))}
-                    disabled={currentVideoPage === 1}
-                    className={`p-1 sm:p-2 rounded-full ${
-                      currentVideoPage === 1 
-                        ? 'text-neutral-700 cursor-not-allowed' 
-                        : 'text-green-400 hover:text-green-300 hover:bg-neutral-800'
-                    } transition-colors`}
-                  >
-                    <FaChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </button>
-                  
-                  <div className="flex gap-1 sm:gap-2">
-                    {Array.from({ length: totalVideoPages }, (_, i) => i + 1).map((page) => (
-                      <button
-                        key={page}
-                        onClick={() => setCurrentVideoPage(page)}
-                        className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full font-mono text-xs sm:text-sm ${
-                          currentVideoPage === page
-                            ? 'bg-green-400 text-neutral-950'
-                            : 'text-green-400 hover:bg-neutral-800'
-                        } transition-colors`}
-                      >
-                        {page}
-                      </button>
-                    ))}
-                  </div>
-
-                  <button
-                    onClick={() => setCurrentVideoPage(p => Math.min(totalVideoPages, p + 1))}
-                    disabled={currentVideoPage === totalVideoPages}
-                    className={`p-1 sm:p-2 rounded-full ${
-                      currentVideoPage === totalVideoPages 
-                        ? 'text-neutral-700 cursor-not-allowed' 
-                        : 'text-green-400 hover:text-green-300 hover:bg-neutral-800'
-                    } transition-colors`}
-                  >
-                    <FaChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </button>
-                </div>
-              </>
-            )}
-          </div>
-        </ShellBox>
-
-        {/* Blog Section */}
-        <ShellBox id="blogs">
+                {/* Blog Section */}
+                <ShellBox id="blogs">
           <div className="flex justify-between items-center">
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/blogs</p>
           </div>
@@ -303,6 +226,83 @@ const DigitalShelf = () => {
                     disabled={currentBlogPage === totalBlogPages}
                     className={`p-1 sm:p-2 rounded-full ${
                       currentBlogPage === totalBlogPages 
+                        ? 'text-neutral-700 cursor-not-allowed' 
+                        : 'text-green-400 hover:text-green-300 hover:bg-neutral-800'
+                    } transition-colors`}
+                  >
+                    <FaChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
+        </ShellBox>
+        
+        {/* YouTube Section */}
+        <ShellBox id="videos">
+          <div className="flex justify-between items-center">
+            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/videos</p>
+          </div>
+          <div className="mt-8">
+            {loading ? (
+              <div className="text-green-400 text-center py-8">Loading videos...</div>
+            ) : error ? (
+                <div className="text-red-400 text-center py-8">
+                    🐢 Hmm... that took a wrong turn
+                    <p className="text-sm mt-2 text-neutral-400">
+                      Let&apos;s try that again. Maybe the internet turtles are tired 🐢💤
+                    </p>
+                </div>
+            ) : videos.length === 0 ? (
+              <div className="text-green-400 text-center py-8">No videos found</div>
+            ) : (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                  {paginatedVideos.map((video) => (
+                    <YouTubeVideo
+                      key={video.id}
+                      videoId={video.id}
+                      title={video.title}
+                      publishedAt={video.publishedAt}
+                    />
+                  ))}
+                </div>
+                
+                {/* Video Pagination */}
+                <div className="flex justify-center items-center gap-2 sm:gap-4 mt-6">
+                  <button
+                    onClick={() => setCurrentVideoPage(p => Math.max(1, p - 1))}
+                    disabled={currentVideoPage === 1}
+                    className={`p-1 sm:p-2 rounded-full ${
+                      currentVideoPage === 1 
+                        ? 'text-neutral-700 cursor-not-allowed' 
+                        : 'text-green-400 hover:text-green-300 hover:bg-neutral-800'
+                    } transition-colors`}
+                  >
+                    <FaChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </button>
+                  
+                  <div className="flex gap-1 sm:gap-2">
+                    {Array.from({ length: totalVideoPages }, (_, i) => i + 1).map((page) => (
+                      <button
+                        key={page}
+                        onClick={() => setCurrentVideoPage(page)}
+                        className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full font-mono text-xs sm:text-sm ${
+                          currentVideoPage === page
+                            ? 'bg-green-400 text-neutral-950'
+                            : 'text-green-400 hover:bg-neutral-800'
+                        } transition-colors`}
+                      >
+                        {page}
+                      </button>
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={() => setCurrentVideoPage(p => Math.min(totalVideoPages, p + 1))}
+                    disabled={currentVideoPage === totalVideoPages}
+                    className={`p-1 sm:p-2 rounded-full ${
+                      currentVideoPage === totalVideoPages 
                         ? 'text-neutral-700 cursor-not-allowed' 
                         : 'text-green-400 hover:text-green-300 hover:bg-neutral-800'
                     } transition-colors`}
