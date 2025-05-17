@@ -17,6 +17,17 @@ export const viewport = "width=device-width, initial-scale=1";
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:title" content="Ashwin Kulkarni" />
+        <meta property="og:description" content="Personal portfolio of Ashwin Kulkarni. Engineering @ IBM Cloud, ISDL | IIT Guwahati | Open Source | Coding Vibes." />
+        <meta property="og:url" content="https://ashwinkulkarni.space" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://ashwinkulkarni.space/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ashwin Kulkarni" />
+        <meta name="twitter:description" content="Personal portfolio of Ashwin Kulkarni. Engineering @ IBM Cloud, ISDL | IIT Guwahati | Open Source | Coding Vibes." />
+        <meta name="twitter:image" content="https://ashwinkulkarni.space/og-image.png" />
+      </head>
       <body className="bg-neutral-950 min-h-screen flex flex-col">
         <ParticleBackground />
         <NavBar />
