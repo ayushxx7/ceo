@@ -6,16 +6,27 @@ const LINES = [
   { prefix: '', text: '', emoji: '', typing: false },
   { 
     prefix: '$ 👋🏻', 
-    text: 'Hey, I\'m ', 
+    text: "Hey, I'm ", 
     emoji: '', 
     typing: false,
-    highlight: { text: 'Ashwin Kulkarni', suffix: ' (^_^)' }
+    highlight: { text: 'Ayush Mandowara', suffix: '' }
   },
-  { prefix: '$ 💼', text: 'Software Engineer', emoji: '', typing: false },
-  { prefix: '$ 💻', text: 'Open Source Contributor', emoji: '', typing: false },
-  { prefix: '$ 🏎️', text: 'Full-Throttle F1 Fan', emoji: '', typing: false },
-  { prefix: '$ 🎮', text: 'ETS2/ATS Player', emoji: '', typing: false },
-  { prefix: '$ 🇮🇳', text: 'Bangalore, India', emoji: '', typing: false },
+  { 
+    prefix: '$ 💼', 
+    text: 'CEO, ', 
+    emoji: '', 
+    typing: false,
+    highlight: { 
+      text: 'The Vibe Coder', 
+      suffix: '', 
+      href: 'https://the-vibe-coder-69.github.io/www/' 
+    }
+  },
+  { prefix: '$ 💼', text: 'Machine Learning Engineer', emoji: '', typing: false },
+  { prefix: '$ 🤖', text: 'GenAI | NLP | Data Science', emoji: '', typing: false },
+  { prefix: '$ 🛠️', text: 'QA Automation | Product Management', emoji: '', typing: false },
+  { prefix: '$ 🌏', text: 'New Delhi, India', emoji: '', typing: false },
+  { prefix: '$ ✉️', text: 'ayush.mandowara.97@gmail.com', emoji: '', typing: false },
 ]
 
 export default function Terminal() {

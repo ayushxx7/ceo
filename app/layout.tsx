@@ -8,8 +8,8 @@ import ParticleBackground from '../components/ParticleBackground';
 import NavBar from '../components/NavBar';
 
 export const metadata: Metadata = {
-  title: 'Ashwin Kulkarni',
-  description: 'personal portfolio of Ashwin describing his work experience, projects, and blogs',
+  title: 'Ayush Mandowara',
+  description: 'Personal portfolio of Ayush Mandowara: Machine Learning Engineer, GenAI, NLP, QA Automation, Product Management.',
 }
 
 export const viewport = "width=device-width, initial-scale=1";
@@ -18,15 +18,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <meta property="og:title" content="Ashwin Kulkarni" />
-        <meta property="og:description" content="Personal portfolio of Ashwin Kulkarni. Engineering @ IBM Cloud, ISDL | IIT Guwahati | Open Source | Coding Vibes." />
-        <meta property="og:url" content="https://ashwinkulkarni.space" />
+        <meta property="og:title" content="Ayush Mandowara" />
+        <meta property="og:description" content="Portfolio of Ayush Mandowara. Machine Learning Engineer with expertise in Data Science, Deep Learning, Generative AI, NLP, QA Automation, and Product Management." />
+        <meta property="og:url" content="https://ayushmandowara.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://ashwinkulkarni.space/og-image.png" />
+        <meta property="og:image" content="https://ayushmandowara.com/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ashwin Kulkarni" />
-        <meta name="twitter:description" content="Personal portfolio of Ashwin Kulkarni. Engineering @ IBM Cloud, ISDL | IIT Guwahati | Open Source | Coding Vibes." />
-        <meta name="twitter:image" content="https://ashwinkulkarni.space/og-image.png" />
+        <meta name="twitter:title" content="Ayush Mandowara" />
+        <meta name="twitter:description" content="Portfolio of Ayush Mandowara. Machine Learning Engineer with expertise in Data Science, Deep Learning, Generative AI, NLP, QA Automation, and Product Management." />
+        <meta name="twitter:image" content="https://ayushmandowara.com/og-image.png" />
       </head>
       <body className="bg-neutral-950 min-h-screen flex flex-col">
         <ParticleBackground />
@@ -37,16 +37,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <footer className="w-full flex flex-col items-center pb-4 md:pb-6 relative z-20 px-4">
           {/* Social Icons */}
           <div className="flex gap-4 md:gap-8 font-mono text-green-400 text-xl md:text-2xl bg-neutral-900/80 rounded-full px-6 md:px-8 py-2 shadow-sm relative">
-            <a href="mailto:ashwin.kulkarni128@gmail.com" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><MdEmail /></a>
-            <a href="https://github.com/AshwinKul28" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaGithub /></a>
-            <a href="https://linkedin.com/in/iashwin28" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaLinkedin /></a>
-            <a href="https://twitter.com/AshwinKUlkarni4" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaXTwitter /></a>
-            <a href="https://www.youtube.com/@ashwin.kulkarni" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaYoutube /></a>
+            <a href="mailto:ayush.mandowara.97@gmail.com" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><MdEmail /></a>
+            <a href="https://github.com/ayushmandowara" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaGithub /></a>
+            <a href="https://linkedin.com/in/ayushmandowara" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaLinkedin /></a>
+            <a href="https://twitter.com/ayushxx7" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaXTwitter /></a>
+            <a href="https://youtube.com/@thevibecoder69" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaYoutube /></a>
+            {/* Add blog or other links as needed */}
           </div>
 
           {/* Made with love text */}
           <div className="text-green-400 text-xs font-mono mt-2 opacity-40">
-            made with <span className="text-red-500">♥</span> by Ashwin
+            made with <span className="text-red-500">♥</span> by Ayush Mandowara
           </div>
         </footer>
       </body>
