@@ -91,6 +91,22 @@ const sections = [
 
 const education = [
   {
+    degree: "Product Management & Agentic AI (Ongoing)",
+    school: "IIT Patna",
+    period: "2025",
+    location: "Patna, India",
+    address: "Bihar, India",
+    type: "cert"
+  },
+  {
+    degree: "Advanced Generative AI Certification",
+    school: "upGrad",
+    period: "2024",
+    location: "Online",
+    address: "Online",
+    type: "cert"
+  },
+  {
     degree: "Master's in Machine Learning and Artificial Intelligence",
     school: "Liverpool John Moores University, United Kingdom",
     period: "Jul’22 to Nov’22",
@@ -132,23 +148,12 @@ export default function AboutPage() {
             <br /><br />
             I am a passionate machine learning engineer with proven expertise in building highly scalable and robust solutions using core techniques of Data Science, Data Analytics, Deep Learning, Generative AI and Natural Language Processing. I also have a knack for Quality Assurance, especially Automated Test Suites and Product Management via JIRA.
             <br /><br />
-            <b>Experience Highlights:</b><br />
-            <b>adeptmind.ai</b> (Delhi, India / Toronto, Canada, Remote):<br />
-            - Machine Learning (GenAI) Engineer → Technical Project Manager, DLP Team (Oct 2023 – Present): Built high-revenue Dynamic Landing Pages (DLP) product, led ML/GenAI efforts, scaled in-house LLM service (100K+ req/day), mentored new hires, and drove MLOps.<br />
-            - Machine Learning (NLP) Engineer, Search Team (Dec’22 – Sep’23): Maintained ML components (PyTorch, HuggingFace, FastAPI), deployed pipelines via AWS Sagemaker.<br />
-            - Software Engineer, Data Team (Apr’22 – Nov’22): Built scraping tools and live inventory software.<br />
-            <b>now.gg</b> (Gurugram, India, Remote): Senior Member of Technical Staff, QA Automation (Sep’21 – Apr’22): Optimized BlueStacks App Player, reduced test/suite run time, regression models for revenue prediction.<br />
-            <b>BlueStacks.com</b> (Gurugram, India, Remote/Onsite): Member of Technical Staff, Technical Support → QA Automation (Jun’19 – Aug’21): Developed automation suite, NLP-powered tools, and integrated live chat.<br />
-            <br />
-            <b>Academic Projects & Achievements:</b><br />
-            - Hierarchical Text Classification (Contrastive Learning, distilbert)<br />
-            - Video Gesture Recognition (MobileNet + GRU)<br />
-            - Telecom Churn Case Study (PCA, XGBoost, Logistic Regression)<br />
-            - Automatic Ticket Classification (NLP, spaCy, Random Forest)<br />
-            - Black Friday Sales Prediction Hackathon (Top 15%)<br />
-            - Bots for Facebook and WhatsApp (PyAutoGUI)<br />
-            - 30+ Knowledge Transfer Sessions, Game Playing AI, Recommendation Engines<br />
-            <br />
+            I have led ML and Generative AI initiatives, scaling in-house LLM services at adepthmind.ai, and developed automation suites and NLP-powered tools at BlueStacks and now.gg. 
+            <br /><br />
+            My academic journey includes hands-on work in hierarchical text classification using contrastive learning and distilbert, video gesture recognition with MobileNet and GRU, and telecom churn analysis with PCA, XGBoost, and logistic regression. 
+            
+            <br /><br />
+            I have also built automatic ticket classification systems, participated in hackathons (Top 15% in Black Friday Sales Prediction), and created bots for Facebook and WhatsApp using PyAutoGUI. Additionally, I have delivered over 30 knowledge transfer sessions and contributed to projects in game-playing AI and recommendation engines.<br /><br />
             Let&apos;s build, automate, and innovate — together.
           </p>
         </ShellBox>

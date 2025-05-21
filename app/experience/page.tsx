@@ -26,78 +26,103 @@ interface OpenSource {
 }
 
 const experiences: Experience[] = [
-    // {
-    //     title: "Software Engineer L2",
-    //     company: "Stripe",
-    //     period: "Jul 2025 - Present",
-    //     location: "Bangalore, India",
-    //     description: [
-    //       "Architected and developed large-scale, event-driven systems using Go and microservices architecture",
-    //       "Implemented and maintained CI/CD pipelines using Tekton and Jenkins for cloud automation",
-    //       "Designed and developed REST APIs and microservices for enterprise applications",
-    //       "Worked extensively with Kubernetes, Docker, and cloud-native technologies",
-    //       "Contributed to open-source projects and maintained internal tools"
-    //     ],
-    //     technologies: [
-    //       { name: "Go", color: "text-cyan-400 border-cyan-400" },
-    //       { name: "Kubernetes", color: "text-blue-500 border-blue-500" },
-    //       { name: "Docker", color: "text-blue-300 border-blue-300" },
-    //       { name: "REST APIs", color: "text-green-300 border-green-300" },
-    //       { name: "Microservices", color: "text-fuchsia-400 border-fuchsia-400" },
-    //       { name: "Tekton", color: "text-pink-400 border-pink-400" },
-    //       { name: "Jenkins", color: "text-orange-400 border-orange-400" },
-    //       { name: "PostgreSQL", color: "text-blue-400 border-blue-400" },
-    //       { name: "Redis", color: "text-red-400 border-red-400" },
-    //       { name: "Kafka", color: "text-orange-400 border-orange-400" }
-    //     ],
-    //     label: "Work",
-    //     logo: "/images/stripe-logo.svg"
-    //   },    
   {
-    title: "Senior Software Engineer",
-    company: "IBM, India Software Labs",
-    period: "Jul 2020 - Present",
-    location: "Bangalore, India",
+    title: "Machine Learning (GenAI) Engineer → Technical Project Manager - DLP Team",
+    company: "adeptmind.ai",
+    period: "Oct 2023 – Present",
+    location: "Remote, Delhi, India",
     description: [
-      "Architected and developed large-scale, event-driven systems using Go and microservices architecture",
-      "Implemented and maintained CI/CD pipelines using Tekton and Jenkins for cloud automation",
-      "Designed and developed REST APIs and microservices for enterprise applications",
-      "Worked extensively with Kubernetes, Docker, and cloud-native technologies",
-      "Contributed to open-source projects and maintained internal tools"
+      "Built the high-revenue Dynamic Landing Pages (DLP) product from scratch under CTO guidance, leading ML/GenAI efforts to auto-generate SEO-optimized retail pages that improved Google rankings and boosted client footfall.",
+      "Built, scaled and maintained an in-house LLM service handling 100K+ requests/day using FastAPI, Celery, and Redis.",
+      "Led cross-functional planning (Scrum, retrospectives), interfacing with product, engineering, and business stakeholders to align roadmap and delivery.",
+      "Mentored new hires, contributed to core model development and MLOps (GitHub Actions, Kubernetes, Prefect) and drove documentation and process maturity."
     ],
     technologies: [
-      { name: "Go", color: "text-cyan-400 border-cyan-400" },
-      { name: "Kubernetes", color: "text-blue-500 border-blue-500" },
-      { name: "Docker", color: "text-blue-300 border-blue-300" },
-      { name: "REST APIs", color: "text-green-300 border-green-300" },
-      { name: "Microservices", color: "text-fuchsia-400 border-fuchsia-400" },
-      { name: "Tekton", color: "text-pink-400 border-pink-400" },
-      { name: "Jenkins", color: "text-orange-400 border-orange-400" },
-      { name: "PostgreSQL", color: "text-blue-400 border-blue-400" },
+      { name: "FastAPI", color: "text-blue-400 border-blue-400" },
+      { name: "Celery", color: "text-orange-400 border-orange-400" },
       { name: "Redis", color: "text-red-400 border-red-400" },
-      { name: "Kafka", color: "text-orange-400 border-orange-400" }
+      { name: "LLM", color: "text-green-400 border-green-400" },
+      { name: "Kubernetes", color: "text-blue-500 border-blue-500" },
+      { name: "GitHub Actions", color: "text-gray-400 border-gray-400" },
+      { name: "Prefect", color: "text-purple-400 border-purple-400" }
     ],
     label: "Work",
-    logo: "/images/ibm-logo.svg"
+    logo: "/images/adeptmind-logo.png" // updated to .png
   },
   {
-    title: "Extreme Blue Intern",
-    company: "IBM, India Software Labs",
-    period: "May 2019 - Jul 2019",
-    location: "Bangalore, India",
+    title: "Machine Learning (Natural Language Processing) Engineer - Search Team",
+    company: "adeptmind.ai",
+    period: "Dec 2022 – Sep 2023",
+    location: "Remote, Toronto, Canada",
     description: [
-      "Worked on the project by 'building insights' team, where we have developed a ML module to predict and minimize the electricity consumption of the big enterprise",
-      "Got Best Project - 1st Runners up position (Public votes) prize in the Extreme Blue internship program"
+      "Maintained Content Understand (CU) and Query Understanding (QU) Machine Learning components using PyTorch, HuggingFace, FastAPI, distilbert, nlp.",
+      "Built and deployed category & classification pipeline via AWS Sagemaker; migrated from TensorFlow."
     ],
     technologies: [
-      { name: "Machine Learning", color: "text-purple-400 border-purple-400" },
-      { name: "Python", color: "text-blue-400 border-blue-400" },
-      { name: "Data Analysis", color: "text-cyan-400 border-cyan-400" },
-      { name: "Energy Analytics", color: "text-green-400 border-green-400" },
-      { name: "IBM Cloud", color: "text-blue-500 border-blue-500" }
+      { name: "PyTorch", color: "text-orange-400 border-orange-400" },
+      { name: "HuggingFace", color: "text-pink-400 border-pink-400" },
+      { name: "FastAPI", color: "text-blue-400 border-blue-400" },
+      { name: "AWS Sagemaker", color: "text-green-400 border-green-400" },
+      { name: "TensorFlow", color: "text-yellow-400 border-yellow-400" },
+      { name: "distilbert", color: "text-purple-400 border-purple-400" }
     ],
-    label: "Intern",
-    logo: "/images/ibm-logo.svg"
+    label: "Work",
+    logo: "/images/adeptmind-logo.png" // updated to .png
+  },
+  {
+    title: "Software Engineer - Data Team",
+    company: "adeptmind.ai",
+    period: "Apr 2022 – Nov 2022",
+    location: "Remote, Toronto, Canada",
+    description: [
+      "Built scraping tools and live inventory software (Python, Go, TypeScript, SQL) for malls."
+    ],
+    technologies: [
+      { name: "Python", color: "text-yellow-400 border-yellow-400" },
+      { name: "Go", color: "text-cyan-400 border-cyan-400" },
+      { name: "TypeScript", color: "text-blue-400 border-blue-400" },
+      { name: "SQL", color: "text-green-400 border-green-400" }
+    ],
+    label: "Work",
+    logo: "/images/adeptmind-logo.png" // updated to .png
+  },
+  {
+    title: "Senior Member of Technical Staff – QA Automation Team",
+    company: "now.gg",
+    period: "Sep 2021 – Apr 2022",
+    location: "Remote, Gurugram, India",
+    description: [
+      "Performance optimization for now.gg BlueStacks Android App Player on Cloud.",
+      "5X reduction in test development time and 2X reduction in Suite Run Time using Data Analysis.",
+      "Regression models for revenue prediction & release funnel tracking (big data, p-value analysis)."
+    ],
+    technologies: [
+      { name: "QA Automation", color: "text-blue-400 border-blue-400" },
+      { name: "Data Analysis", color: "text-cyan-400 border-cyan-400" },
+      { name: "Regression", color: "text-green-400 border-green-400" },
+      { name: "Big Data", color: "text-orange-400 border-orange-400" }
+    ],
+    label: "Work",
+    logo: "/images/now.gg-logo.png"
+  },
+  {
+    title: "Member of Technical Staff – Technical Support → QA Automation Team",
+    company: "BlueStacks.com",
+    period: "Jun 2019 – Aug 2021",
+    location: "Remote/Onsite, Gurugram, India",
+    description: [
+      "Developed a multi-lingual PyTest-based automation suite for BlueStacks 5 (Windows 7, 8, 8.1, 10).",
+      "Developed NLP-powered tools over Zendesk Support for SEO, log analysis, and automated replies.",
+      "Integrated and customized Kommunicate.io – DialogFlow live chat into Zendesk and App Player."
+    ],
+    technologies: [
+      { name: "PyTest", color: "text-yellow-400 border-yellow-400" },
+      { name: "NLP", color: "text-purple-400 border-purple-400" },
+      { name: "Zendesk", color: "text-blue-400 border-blue-400" },
+      { name: "DialogFlow", color: "text-green-400 border-green-400" }
+    ],
+    label: "Work",
+    logo: "/images/now.gg-logo.png" // use now.gg logo for BlueStacks
   }
 ];
 
@@ -310,4 +335,4 @@ export default function ExperiencePage() {
       </div>
     </div>
   );
-} 
+}
