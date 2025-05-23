@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { FaGithub, FaStar, FaCodeBranch } from 'react-icons/fa';
+import { FaGithub, FaStar, FaCodeBranch, FaHistory } from 'react-icons/fa';
 
 interface ProjectCardProps {
   title: string;
@@ -7,6 +7,7 @@ interface ProjectCardProps {
   githubUrl: string;
   stars: number;
   forks: number;
+  commits: number;
   language: string;
 }
 
@@ -16,6 +17,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
   githubUrl,
   stars,
   forks,
+  commits,
   language,
 }) => {
   // Map languages to colors
@@ -81,17 +83,19 @@ const ProjectCard: FC<ProjectCardProps> = ({
   return (
     <div className="border border-neutral-700 bg-neutral-900/80 rounded-lg p-4 sm:p-6 shadow-lg">
       <div className="flex justify-between items-start mb-4">
-        <div className="flex items-center gap-2">
-          <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold">{title}</h3>
-        </div>
-        <a
-          href={githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-green-400 hover:text-green-300 transition-colors"
-        >
-          <FaGithub size={20} />
-        </a>
+      <div className="flex items-center gap-2">
+        <h3 className="text-white text-sm sm:text-base md:text-lg font-semibold">
+        {title.length > 20 ? `${title.slice(0, 20)}…` : title}
+        </h3>
+      </div>
+      <a
+        href={githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-green-400 hover:text-green-300 transition-colors"
+      >
+        <FaGithub size={20} />
+      </a>
       </div>
       
       <p className="text-neutral-300 text-xs sm:text-sm mb-4">{description}</p>
@@ -107,11 +111,15 @@ const ProjectCard: FC<ProjectCardProps> = ({
           <span>{forks}</span>
         </div>
         <div className="flex items-center gap-1">
+          <FaHistory />
+          <span>{commits}</span>
+        </div>
+      </div><br />
+              <div className="flex items-center gap-1">
           <span className={`px-2 sm:px-3 py-0.5 sm:py-1 bg-neutral-800/80 border font-mono text-xs sm:text-sm rounded-md ${languageColors[language] || languageColors.default}`}>
             {language}
           </span>
         </div>
-      </div>
     </div>
   );
 };

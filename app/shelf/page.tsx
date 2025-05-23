@@ -46,9 +46,8 @@ interface MediumResponse {
 }
 
 // Your YouTube channel ID - you can find this in your channel URL
-const CHANNEL_ID = "UC4dTM594UUCw8rsMIMkdj7Q"; // Replace with your actual channel ID from YouTube
+const CHANNEL_ID = "UCq0-qpfVb24-28m9A5b1VIw"; // Replace with your actual channel ID from YouTube
 const API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
-const MEDIUM_USERNAME = "ashwin.kulkarni128";
 
 const staticBlogPosts: BlogPost[] = [
   {
