@@ -34,17 +34,6 @@ interface YouTubeResponse {
   }>;
 }
 
-interface MediumResponse {
-  status: string;
-  items: Array<{
-    guid: string;
-    title: string;
-    description: string;
-    pubDate: string;
-    link: string;
-  }>;
-}
-
 // Your YouTube channel ID - you can find this in your channel URL
 const CHANNEL_ID = "UCq0-qpfVb24-28m9A5b1VIw"; // Replace with your actual channel ID from YouTube
 const API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
@@ -112,9 +101,8 @@ const DigitalShelf = () => {
   const [currentVideoPage, setCurrentVideoPage] = useState(1);
   const [currentBlogPage, setCurrentBlogPage] = useState(1);
   const [videos, setVideos] = useState<Video[]>([]);
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>(staticBlogPosts);
+  const [blogPosts] = useState<BlogPost[]>(staticBlogPosts);
   const [loading, setLoading] = useState(true);
-  const [blogLoading, setBlogLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const videosPerPage = 6;
   const blogsPerPage = 4;
@@ -192,9 +180,7 @@ const DigitalShelf = () => {
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/blogs</p>
           </div>
           <div className="mt-8">
-            {blogLoading ? (
-              <div className="text-green-400 text-center py-8">Loading blog posts...</div>
-            ) : blogPosts.length === 0 ? (
+            {blogPosts.length === 0 ? (
               <div className="text-green-400 text-center py-8">No blog posts found</div>
             ) : (
               <>
