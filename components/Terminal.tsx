@@ -23,8 +23,8 @@ const LINES = [
     }
   },
   { prefix: '$ 💼', text: 'Machine Learning Engineer', emoji: '', typing: false },
-  { prefix: '$ 🤖', text: 'GenAI | NLP | Data Science', emoji: '', typing: false },
-  { prefix: '$ 🛠️', text: 'QA Automation | Product Management', emoji: '', typing: false },
+  { prefix: '$ 🤖', text: 'GenAI | NLP | Data Science | Deep Learning', emoji: '', typing: false },
+  { prefix: '$ 🛠️', text: 'QA Automation | Product Management | JIRA', emoji: '', typing: false },
   { prefix: '$ 🌏', text: 'New Delhi, India', emoji: '', typing: false },
   { prefix: '$ ✉️', text: 'ayush.mandowara.97@gmail.com', emoji: '', typing: false },
 ]
@@ -42,18 +42,7 @@ export default function Terminal() {
     return () => clearInterval(interval)
   }, [])
 
-  // Trigger bright glow after the last line is displayed
-  useEffect(() => {
-    if (currentLine === LINES.length - 1 && !isTyping) {
-      setShowGlow(true)
-      const timeout = setTimeout(() => {
-        setShowGlow(false)
-      }, 1000) // Bright glow for 1 second
-      return () => clearTimeout(timeout)
-    }
-  }, [currentLine, isTyping])
-
-  // Typing effect
+  // Typing effect and glow
   useEffect(() => {
     if (currentLine >= LINES.length) return
 
@@ -85,17 +74,26 @@ export default function Terminal() {
     }
   }, [currentLine])
 
-  // Calculate dynamic shadow for gradual glow
+  // Glow effect after last line
+  useEffect(() => {
+    if (currentLine === LINES.length - 1 && !isTyping) {
+      setShowGlow(true)
+      const timeout = setTimeout(() => {
+        setShowGlow(false)
+      }, 1000)
+      return () => clearTimeout(timeout)
+    }
+  }, [currentLine, isTyping])
+
+  // Dynamic shadow for glow
   let dynamicShadow = ''
   if (showGlow) {
     dynamicShadow = '0 0 32px 8px rgba(34,213,238,0.4)'
   } else if (currentLine > 0 && currentLine < LINES.length) {
-    // Progress from subtle to bright
     const progress = currentLine / (LINES.length - 1)
-    // Interpolate shadow size and opacity
-    const blur = 16 + 16 * progress // 16px to 32px
-    const spread = 2 + 6 * progress // 2px to 8px
-    const alpha = 0.15 + 0.25 * progress // 0.15 to 0.4
+    const blur = 16 + 16 * progress
+    const spread = 2 + 6 * progress
+    const alpha = 0.15 + 0.25 * progress
     dynamicShadow = `0 0 ${blur}px ${spread}px rgba(34,213,238,${alpha})`
   }
 
@@ -111,7 +109,18 @@ export default function Terminal() {
               {line.prefix} {displayText}
               {line.highlight && (
                 <>
-                  <span className="text-white font-semibold">{line.highlight.text}</span>
+                  {line.highlight.href ? (
+                    <a
+                      href={line.highlight.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline text-white font-semibold hover:text-green-300"
+                    >
+                      {line.highlight.text}
+                    </a>
+                  ) : (
+                    <span className="text-white font-semibold">{line.highlight.text}</span>
+                  )}
                   {line.highlight.suffix}
                 </>
               )}
@@ -122,7 +131,18 @@ export default function Terminal() {
               {line.prefix} {line.text}
               {line.highlight && (
                 <>
-                  <span className="text-white font-semibold">{line.highlight.text}</span>
+                  {line.highlight.href ? (
+                    <a
+                      href={line.highlight.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline text-white font-semibold hover:text-green-300"
+                    >
+                      {line.highlight.text}
+                    </a>
+                  ) : (
+                    <span className="text-white font-semibold">{line.highlight.text}</span>
+                  )}
                   {line.highlight.suffix}
                 </>
               )}
