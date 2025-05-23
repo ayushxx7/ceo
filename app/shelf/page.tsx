@@ -50,13 +50,72 @@ const CHANNEL_ID = "UC4dTM594UUCw8rsMIMkdj7Q"; // Replace with your actual chann
 const API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
 const MEDIUM_USERNAME = "ashwin.kulkarni128";
 
+const staticBlogPosts: BlogPost[] = [
+  {
+    id: "rl-05",
+    title: "Deep Reinforcement Learning",
+    excerpt: "A deep dive into advanced reinforcement learning techniques and architectures.",
+    date: "2023-11-01",
+    url: "http://ayush-blog.netlify.app//ReinforcementLearning/05-Deep-Reinforcement-Learning/"
+  },
+  {
+    id: "ml-main",
+    title: "Machine Learning Overview",
+    excerpt: "Comprehensive guide to machine learning concepts, algorithms, and applications.",
+    date: "2023-10-15",
+    url: "http://ayush-blog.netlify.app//machine-learning"
+  },
+  {
+    id: "rl-04",
+    title: "Model-Free Methods in RL",
+    excerpt: "Understanding model-free approaches in reinforcement learning.",
+    date: "2023-09-20",
+    url: "http://ayush-blog.netlify.app//ReinforcementLearning/04-Model-Free-Methods/"
+  },
+  {
+    id: "pca",
+    title: "Principal Component Analysis",
+    excerpt: "Dimensionality reduction using PCA in machine learning pipelines.",
+    date: "2023-08-10",
+    url: "http://ayush-blog.netlify.app//PredictiveAnalysis/16-Pricipal-Component-Analysis/"
+  },
+  {
+    id: "rf",
+    title: "Random Forest",
+    excerpt: "How Random Forests work and why they are so powerful for classification tasks.",
+    date: "2023-07-05",
+    url: "http://ayush-blog.netlify.app//PredictiveAnalysis/13-Random-Forest/"
+  },
+  {
+    id: "cnn",
+    title: "Convolutional Neural Networks (CNN)",
+    excerpt: "Introduction to CNNs and their applications in image processing.",
+    date: "2023-06-15",
+    url: "http://ayush-blog.netlify.app//DeepLearning/04-CNN/"
+  },
+  {
+    id: "lstm-gru",
+    title: "LSTM & GRU Networks",
+    excerpt: "Exploring advanced recurrent neural network architectures: LSTM and GRU.",
+    date: "2023-05-10",
+    url: "http://ayush-blog.netlify.app//DeepLearning/07-LSTM-GRU/"
+  },
+  {
+    id: "topic-modelling",
+    title: "Topic Modelling in NLP",
+    excerpt: "Techniques for extracting topics from text using NLP.",
+    date: "2023-04-01",
+    url: "http://ayush-blog.netlify.app//NLP/09-Topic-Modelling/"
+  }
+];
+
 const DigitalShelf = () => {
   const [currentVideoPage, setCurrentVideoPage] = useState(1);
   const [currentBlogPage, setCurrentBlogPage] = useState(1);
   const [videos, setVideos] = useState<Video[]>([]);
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>(staticBlogPosts);
   const [loading, setLoading] = useState(true);
-  const [blogLoading, setBlogLoading] = useState(true);
+  const [blogLoading, setBlogLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const videosPerPage = 6;
   const blogsPerPage = 4;
@@ -104,32 +163,7 @@ const DigitalShelf = () => {
       }
     };
 
-    const fetchBlogPosts = async () => {
-      try {
-        const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${MEDIUM_USERNAME}`);
-        const data = await response.json() as MediumResponse;
-        
-        if (data.status === 'ok' && data.items) {
-          const formattedPosts = data.items.map((item) => ({
-            id: item.guid,
-            title: item.title,
-            excerpt: item.description.replace(/<[^>]*>/g, '').substring(0, 150) + '...',
-            date: item.pubDate,
-            url: item.link
-          }));
-          setBlogPosts(formattedPosts);
-        } else {
-          throw new Error('Failed to fetch blog posts');
-        }
-      } catch (error) {
-        console.error("Error fetching blog posts:", error);
-      } finally {
-        setBlogLoading(false);
-      }
-    };
-
     fetchVideos();
-    fetchBlogPosts();
   }, []);
 
   const totalVideoPages = Math.ceil(videos.length / videosPerPage);
@@ -340,4 +374,4 @@ const DigitalShelf = () => {
   );
 };
 
-export default DigitalShelf; 
+export default DigitalShelf;
