@@ -1,4 +1,6 @@
 import ShellBox from "@/components/ShellBox";
+import CommandBar from '@/components/TerminalCommandBar'
+
 import Link from 'next/link';
 
 const toolGroups = [
@@ -138,6 +140,7 @@ export default function AboutPage() {
       {/* Main Content */}
       <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6">
         {/* Whoami Section */}
+        <CommandBar />
         <ShellBox id="whoami">
           <div className="flex justify-between items-center">
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ whoami</p>
@@ -156,9 +159,11 @@ export default function AboutPage() {
             I have also built automatic ticket classification systems, participated in hackathons (Top 15% in Black Friday Sales Prediction), and created bots for Facebook and WhatsApp using PyAutoGUI. Additionally, I have delivered over 30 knowledge transfer sessions and contributed to projects in game-playing AI and recommendation engines.<br /><br />
             Let&apos;s build, automate, and innovate — together.
           </p>
+          
         </ShellBox>
 
         {/* Education Section */}
+        
         <ShellBox id="education">
           <div className="flex justify-between items-center">
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ cat education.txt</p>
@@ -188,6 +193,9 @@ export default function AboutPage() {
             ))}
           </div>
         </ShellBox>
+        
+        
+        
 
         {/* Tools Section */}
         <ShellBox id="skills">
@@ -212,6 +220,8 @@ export default function AboutPage() {
             ))}
           </div>
         </ShellBox>
+        
+
 
         <ShellBox>
           {/* Home Link */}
@@ -219,6 +229,8 @@ export default function AboutPage() {
               $ cd /home
             </Link>
         </ShellBox>
+        
+
       </div>
 
       {/* Vertical Section Indicator - fixed to right center */}
@@ -234,6 +246,7 @@ export default function AboutPage() {
             <div className="w-0.5 h-8 bg-green-400/40 group-hover:bg-green-400 transition-colors"></div>
           </div>
         ))}
+        
       </div>
     </div>
   );

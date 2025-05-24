@@ -18,6 +18,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+      <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha512-Tbw1+0M9X9S0k4WhxHl6hFvHce7n+Ay0gYIo/ZUuNYvZYgrC84CnA1wFf1eROhB7cfPrWfQdwX7wOjjRFcGubw=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
         <meta property="og:title" content="Ayush Mandowara" />
         <meta property="og:description" content="Portfolio of Ayush Mandowara. Machine Learning Engineer with expertise in Data Science, Deep Learning, Generative AI, NLP, QA Automation, and Product Management." />
         <meta property="og:url" content="https://ayushmandowara.com" />

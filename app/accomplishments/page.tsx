@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import ShellBox from "@/components/ShellBox";
+import CommandBar from '@/components/TerminalCommandBar'
+
 import Link from 'next/link';
 
 interface Accomplishment {
@@ -202,6 +204,7 @@ export default function Accomplishments() {
   return (
     <div className="flex justify-center relative">
       <div className="flex-1 max-w-2xl space-y-4 sm:space-y-6 px-3 sm:px-6">
+      <CommandBar />
         <ShellBox>
         <div className="flex justify-between items-center">
             <div className="flex items-center gap-1 sm:gap-2">

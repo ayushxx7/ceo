@@ -6,6 +6,7 @@ import ShellBox from "../../components/ShellBox";
 import Link from "next/link";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import YouTubeVideo from "../../components/YouTubeVideo";
+import CommandBar from '@/components/TerminalCommandBar'
 
 interface Video {
   id: string;
@@ -175,6 +176,7 @@ const DigitalShelf = () => {
     <div className="flex justify-center relative min-h-screen overflow-x-hidden">
       <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6 py-20">
                 {/* Blog Section */}
+                <CommandBar/>
                 <ShellBox id="blogs">
           <div className="flex justify-between items-center">
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/blogs</p>

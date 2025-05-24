@@ -52,7 +52,7 @@ export default function ParticleBackground() {
         if (!canvas) return;
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
+        this.size = Math.random() * 2.5 + 1.5;
         this.baseSpeedX = (Math.random() * 2 - 1) * 0.3;
         this.baseSpeedY = (Math.random() * 2 - 1) * 0.3;
         this.speedX = this.baseSpeedX;
