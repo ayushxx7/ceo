@@ -1,6 +1,5 @@
 import ShellBox from "@/components/ShellBox";
 import CommandBar from '@/components/TerminalCommandBar'
-import TerminalPageWrapper from "@/components/TerminalPageWrapper";
 
 import Link from 'next/link';
 
@@ -231,7 +230,7 @@ export default function AboutPage() {
       </div>
 
       {/* Vertical Section Indicator - fixed to right center */}
-      <div className="hidden lg:flex flex-col items-end gap-4 fixed right-0 top-1/2 -translate-y-1/2 z-50 pr-2">
+      <div className="flex flex-col items-end gap-4 fixed right-0 top-1/2 -translate-y-1/2 z-[999] pr-2">
         {sections.map((section) => (
           <div key={section.id} className="flex items-center gap-2 group">
             <a 
@@ -243,8 +242,8 @@ export default function AboutPage() {
             <div className="w-0.5 h-8 bg-green-400/40 group-hover:bg-green-400 transition-colors"></div>
           </div>
         ))}
-        
       </div>
+
     </div>
   );
 }

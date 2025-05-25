@@ -10,8 +10,18 @@ const PAGES = [
   { command: "experience", path: "/experience", description: "See my experience" },
   { command: "accomplishments", path: "/accomplishments", description: "Check my accomplishments" },
   { command: "projects", path: "/projects", description: "View my projects" },
-  { command: "shelf", path: "/shelf", description: "See my digital shelf" }
+  { command: "shelf", path: "/shelf", description: "See my digital shelf" },
+
+  // In-page anchors
+  { command: "whoami", path: "#whoami", description: "Who I am section" },
+  { command: "skills", path: "#skills", description: "My skills section" },
+  { command: "education", path: "#education", description: "My education section" },
+  { command: "opensource", path: "#opensource", description: "My open source work" },
+  { command: "career", path: "#career", description: "My career journey" },
+  { command: "blog", path: "#blog", description: "My blog posts" },
+  { command: "yt", path: "#yt", description: "My YouTube content" }
 ];
+
 
 function parseCdArg(arg: string) {
   const match = PAGES.find(
@@ -102,6 +112,7 @@ export default function TerminalCommandBar() {
           : idx + 1
       );
     }
+    
   };
 
   React.useEffect(() => {
@@ -129,7 +140,7 @@ export default function TerminalCommandBar() {
             className="flex-1 bg-transparent text-white placeholder-neutral-500 focus:outline-none"
             style={{ fontFamily: "inherit" }}
             autoCorrect="off"
-            autoCapitalize="off"  
+            autoCapitalize="none"  
             spellCheck={false}
             />
           </div>
