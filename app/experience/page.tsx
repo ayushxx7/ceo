@@ -313,12 +313,7 @@ export default function ExperiencePage() {
           </div>
         </ShellBox>
 
-        <ShellBox>
-          {/* Home Link */}
-          <Link href="/" className="text-green-400 text-sm sm:text-base md:text-lg font-mono">
-              $ cd /home
-            </Link>
-        </ShellBox>
+        
       </div>
 
       {/* Vertical Section Indicator - fixed to right center */}

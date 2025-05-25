@@ -336,11 +336,7 @@ const DigitalShelf = () => {
           </div>
         </ShellBox>
 
-        <ShellBox>
-          <Link href="/" className="text-green-400 text-sm sm:text-base md:text-lg font-mono">
-            $ cd /home
-          </Link>
-        </ShellBox>
+        
 
         {/* Vertical Section Indicator - fixed to right center */}
         <div className="hidden lg:flex flex-col items-end gap-4 fixed right-0 top-1/2 -translate-y-1/2 z-10 pr-2">

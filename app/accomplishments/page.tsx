@@ -325,11 +325,7 @@ export default function Accomplishments() {
 
 
         {/* Home Link */}
-        <ShellBox>
-        <Link href="/" className="text-green-400 text-sm sm:text-base md:text-lg font-mono">
-                $ cd /home
-            </Link>
-        </ShellBox>
+        
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import ShellBox from "@/components/ShellBox";
 import CommandBar from '@/components/TerminalCommandBar'
+import TerminalPageWrapper from "@/components/TerminalPageWrapper";
 
 import Link from 'next/link';
 
@@ -136,10 +137,12 @@ const education = [
 
 export default function AboutPage() {
   return (
+        
     <div className="flex justify-center relative">
       {/* Main Content */}
       <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6">
         {/* Whoami Section */}
+        
         <CommandBar />
         <ShellBox id="whoami">
           <div className="flex justify-between items-center">
@@ -223,12 +226,6 @@ export default function AboutPage() {
         
 
 
-        <ShellBox>
-          {/* Home Link */}
-            <Link href="/" className="text-green-400 text-sm sm:text-base md:text-lg font-mono">
-              $ cd /home
-            </Link>
-        </ShellBox>
         
 
       </div>

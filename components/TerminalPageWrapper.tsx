@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function ShellBox({ children, id }: { children: React.ReactNode; id?: string }) {
+export default function TerminalPageWrapper({ children }: { children: React.ReactNode }) {
   return (
-<div
+    <div
       className="bg-black border border-green-500 p-4 sm:p-6 rounded-md w-full max-w-xl mx-auto shadow-xl 
         min-h-[70vh] flex flex-col justify-center items-center font-mono text-green-300"
       style={{
@@ -10,7 +10,8 @@ export default function ShellBox({ children, id }: { children: React.ReactNode; 
         marginTop: "2rem",
         marginBottom: "2rem",
       }}
-    >      {children}
+    >
+      {children}
     </div>
   );
-} 
+}
