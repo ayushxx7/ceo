@@ -1,7 +1,7 @@
 'use client';
 import ShellBox from "@/components/ShellBox";
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import CommandBar from '@/components/TerminalCommandBar'
 
 interface Experience {

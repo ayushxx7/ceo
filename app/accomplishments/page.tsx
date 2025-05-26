@@ -5,7 +5,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import ShellBox from "@/components/ShellBox";
 import CommandBar from '@/components/TerminalCommandBar'
 
-import Link from 'next/link';
+// import Link from 'next/link';
 
 interface Accomplishment {
   id: number;

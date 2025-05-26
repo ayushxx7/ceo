@@ -1,7 +1,6 @@
 import ShellBox from "@/components/ShellBox";
 import CommandBar from '@/components/TerminalCommandBar'
 
-import Link from 'next/link';
 
 const toolGroups = [
   {

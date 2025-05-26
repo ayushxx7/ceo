@@ -3,10 +3,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ShellBox from "../../components/ShellBox";
-import Link from "next/link";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import YouTubeVideo from "../../components/YouTubeVideo";
-import CommandBar from '@/components/TerminalCommandBar'
+import CommandBar from "@/components/TerminalCommandBar";
 
 interface Video {
   id: string;
@@ -35,8 +34,7 @@ interface YouTubeResponse {
   }>;
 }
 
-// Your YouTube channel ID - you can find this in your channel URL
-const CHANNEL_ID = "UCq0-qpfVb24-28m9A5b1VIw"; // Replace with your actual channel ID from YouTube
+const CHANNEL_ID = "UCq0-qpfVb24-28m9A5b1VIw";
 const API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
 
 const staticBlogPosts: BlogPost[] = [
@@ -111,27 +109,22 @@ const DigitalShelf = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       if (!API_KEY) {
-        setError(`YouTube API key is not configured. Please check your .env.local file. Current value: ${API_KEY}`);
+        setError(`YouTube API key is not configured.`);
         setLoading(false);
         return;
       }
 
       try {
-        console.log('Fetching videos with API key:', API_KEY.substring(0, 5) + '...');
         const response = await fetch(
           `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=50&type=video`
         );
-        
+
         if (!response.ok) {
           const errorData = await response.json();
           throw new Error(`YouTube API error: ${errorData.error?.message || response.statusText}`);
         }
-        
+
         const data = await response.json() as YouTubeResponse;
-        
-        if (!data.items || !Array.isArray(data.items)) {
-          throw new Error('Invalid response format from YouTube API');
-        }
 
         const formattedVideos = data.items
           .filter((item) => item.id?.kind === "youtube#video" && item.id?.videoId)
@@ -140,11 +133,10 @@ const DigitalShelf = () => {
             title: item.snippet?.title || 'Untitled Video',
             publishedAt: item.snippet?.publishedAt || new Date().toISOString(),
           }));
-        
+
         setVideos(formattedVideos);
         setError(null);
       } catch (error) {
-        console.error("Error fetching YouTube videos:", error);
         setError(error instanceof Error ? error.message : 'Failed to fetch videos');
       } finally {
         setLoading(false);
@@ -175,12 +167,11 @@ const DigitalShelf = () => {
   return (
     <div className="flex justify-center relative min-h-screen overflow-x-hidden">
       <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6 py-20">
-                {/* Blog Section */}
-                <CommandBar/>
-                <ShellBox id="blogs">
-          <div className="flex justify-between items-center">
-            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/blogs</p>
-          </div>
+        <CommandBar />
+
+        {/* Blogs Section */}
+        <ShellBox id="blogs">
+          <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/blogs</p>
           <div className="mt-8">
             {blogPosts.length === 0 ? (
               <div className="text-green-400 text-center py-8">No blog posts found</div>
@@ -193,8 +184,12 @@ const DigitalShelf = () => {
                       whileHover={{ scale: 1.01 }}
                       className="bg-neutral-800/50 rounded-lg p-4 sm:p-6 border border-neutral-700"
                     >
-                      <h3 className="font-mono text-xl mb-3 text-green-400">{post.title}</h3>
-                      <p className="text-neutral-400 mb-4">{post.excerpt}</p>
+                    <a href={post.url} target="_blank" rel="noopener noreferrer">
+                      <h3 className="font-mono text-xl mb-3 text-green-400 hover:underline">
+                        {post.title}
+                      </h3>
+                    </a>       
+                    <p className="text-neutral-400 mb-4">{post.excerpt}</p>
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-neutral-500">
                           {new Date(post.date).toLocaleDateString()}
@@ -213,67 +208,29 @@ const DigitalShelf = () => {
                 </div>
 
                 {/* Blog Pagination */}
-                <div className="flex justify-center items-center gap-2 sm:gap-4 mt-8">
-                  <button
-                    onClick={() => setCurrentBlogPage(p => Math.max(1, p - 1))}
-                    disabled={currentBlogPage === 1}
-                    className={`p-1 sm:p-2 rounded-full ${
-                      currentBlogPage === 1 
-                        ? 'text-neutral-700 cursor-not-allowed' 
-                        : 'text-green-400 hover:text-green-300 hover:bg-neutral-800'
-                    } transition-colors`}
-                  >
-                    <FaChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </button>
-                  
-                  <div className="flex gap-1 sm:gap-2">
-                    {Array.from({ length: totalBlogPages }, (_, i) => i + 1).map((page) => (
-                      <button
-                        key={page}
-                        onClick={() => setCurrentBlogPage(page)}
-                        className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full font-mono text-xs sm:text-sm ${
-                          currentBlogPage === page
-                            ? 'bg-green-400 text-neutral-950'
-                            : 'text-green-400 hover:bg-neutral-800'
-                        } transition-colors`}
-                      >
-                        {page}
-                      </button>
-                    ))}
-                  </div>
-
-                  <button
-                    onClick={() => setCurrentBlogPage(p => Math.min(totalBlogPages, p + 1))}
-                    disabled={currentBlogPage === totalBlogPages}
-                    className={`p-1 sm:p-2 rounded-full ${
-                      currentBlogPage === totalBlogPages 
-                        ? 'text-neutral-700 cursor-not-allowed' 
-                        : 'text-green-400 hover:text-green-300 hover:bg-neutral-800'
-                    } transition-colors`}
-                  >
-                    <FaChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </button>
-                </div>
+                <Pagination
+                  currentPage={currentBlogPage}
+                  totalPages={totalBlogPages}
+                  setPage={setCurrentBlogPage}
+                />
               </>
             )}
           </div>
         </ShellBox>
-        
-        {/* YouTube Section */}
+
+        {/* Videos Section */}
         <ShellBox id="videos">
-          <div className="flex justify-between items-center">
-            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/videos</p>
-          </div>
+          <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/videos</p>
           <div className="mt-8">
             {loading ? (
               <div className="text-green-400 text-center py-8">Loading videos...</div>
             ) : error ? (
-                <div className="text-red-400 text-center py-8">
-                    🐢 Hmm... that took a wrong turn
-                    <p className="text-sm mt-2 text-neutral-400">
-                      Let&apos;s try that again. Maybe the internet turtles are tired 🐢💤
-                    </p>
-                </div>
+              <div className="text-red-400 text-center py-8">
+                🐢 Hmm... that took a wrong turn
+                <p className="text-sm mt-2 text-neutral-400">
+                  Let&apos;s try that again. Maybe the internet turtles are tired 🐢💤
+                </p>
+              </div>
             ) : videos.length === 0 ? (
               <div className="text-green-400 text-center py-8">No videos found</div>
             ) : (
@@ -288,61 +245,23 @@ const DigitalShelf = () => {
                     />
                   ))}
                 </div>
-                
-                {/* Video Pagination */}
-                <div className="flex justify-center items-center gap-2 sm:gap-4 mt-6">
-                  <button
-                    onClick={() => setCurrentVideoPage(p => Math.max(1, p - 1))}
-                    disabled={currentVideoPage === 1}
-                    className={`p-1 sm:p-2 rounded-full ${
-                      currentVideoPage === 1 
-                        ? 'text-neutral-700 cursor-not-allowed' 
-                        : 'text-green-400 hover:text-green-300 hover:bg-neutral-800'
-                    } transition-colors`}
-                  >
-                    <FaChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </button>
-                  
-                  <div className="flex gap-1 sm:gap-2">
-                    {Array.from({ length: totalVideoPages }, (_, i) => i + 1).map((page) => (
-                      <button
-                        key={page}
-                        onClick={() => setCurrentVideoPage(page)}
-                        className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full font-mono text-xs sm:text-sm ${
-                          currentVideoPage === page
-                            ? 'bg-green-400 text-neutral-950'
-                            : 'text-green-400 hover:bg-neutral-800'
-                        } transition-colors`}
-                      >
-                        {page}
-                      </button>
-                    ))}
-                  </div>
 
-                  <button
-                    onClick={() => setCurrentVideoPage(p => Math.min(totalVideoPages, p + 1))}
-                    disabled={currentVideoPage === totalVideoPages}
-                    className={`p-1 sm:p-2 rounded-full ${
-                      currentVideoPage === totalVideoPages 
-                        ? 'text-neutral-700 cursor-not-allowed' 
-                        : 'text-green-400 hover:text-green-300 hover:bg-neutral-800'
-                    } transition-colors`}
-                  >
-                    <FaChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </button>
-                </div>
+                {/* Video Pagination */}
+                <Pagination
+                  currentPage={currentVideoPage}
+                  totalPages={totalVideoPages}
+                  setPage={setCurrentVideoPage}
+                />
               </>
             )}
           </div>
         </ShellBox>
 
-        
-
-        {/* Vertical Section Indicator - fixed to right center */}
+        {/* Section Links */}
         <div className="hidden lg:flex flex-col items-end gap-4 fixed right-0 top-1/2 -translate-y-1/2 z-10 pr-2">
           {sections.map((section) => (
             <div key={section.id} className="flex items-center gap-2 group">
-              <a 
+              <a
                 href={`#${section.id}`}
                 className="text-green-400/40 group-hover:text-green-400 font-mono text-base transition-colors"
               >
@@ -356,5 +275,57 @@ const DigitalShelf = () => {
     </div>
   );
 };
+
+const Pagination = ({
+  currentPage,
+  totalPages,
+  setPage,
+}: {
+  currentPage: number;
+  totalPages: number;
+  setPage: (page: number) => void;
+}) => (
+  <div className="flex justify-center items-center gap-2 sm:gap-4 mt-8">
+    <button
+      onClick={() => setPage(Math.max(1, currentPage - 1))}
+      disabled={currentPage === 1}
+      className={`p-1 sm:p-2 rounded-full ${
+        currentPage === 1
+          ? 'text-neutral-700 cursor-not-allowed'
+          : 'text-green-400 hover:text-green-300 hover:bg-neutral-800'
+      } transition-colors`}
+    >
+      <FaChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+    </button>
+
+    <div className="flex gap-1 sm:gap-2">
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+        <button
+          key={page}
+          onClick={() => setPage(page)}
+          className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full font-mono text-xs sm:text-sm ${
+            currentPage === page
+              ? 'bg-green-400 text-neutral-950'
+              : 'text-green-400 hover:bg-neutral-800'
+          } transition-colors`}
+        >
+          {page}
+        </button>
+      ))}
+    </div>
+
+    <button
+      onClick={() => setPage(Math.min(totalPages, currentPage + 1))}
+      disabled={currentPage === totalPages}
+      className={`p-1 sm:p-2 rounded-full ${
+        currentPage === totalPages
+          ? 'text-neutral-700 cursor-not-allowed'
+          : 'text-green-400 hover:text-green-300 hover:bg-neutral-800'
+      } transition-colors`}
+    >
+      <FaChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
+    </button>
+  </div>
+);
 
 export default DigitalShelf;
