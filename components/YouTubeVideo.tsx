@@ -1,4 +1,7 @@
-import { motion } from "framer-motion";
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
 
 interface YouTubeVideoProps {
   videoId: string;
@@ -6,32 +9,34 @@ interface YouTubeVideoProps {
   publishedAt: string;
 }
 
-const YouTubeVideo = ({ videoId, title, publishedAt }: YouTubeVideoProps) => {
+const YouTubeVideo: React.FC<YouTubeVideoProps> = ({ videoId, title, publishedAt }) => {
+  const formattedDate = new Date(publishedAt).toLocaleDateString(undefined, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+
   return (
     <motion.div
-      whileHover={{ scale: 1.02 }}
-      className="bg-neutral-800/50 rounded-lg overflow-hidden border border-neutral-700"
+      className="bg-gray-900 rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-105"
+      whileHover={{ scale: 1.05 }}
     >
-      <a
-        href={`https://youtube.com/watch?v=${videoId}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block relative aspect-video"
-      >
-        <img
-          src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
-          alt={title}
-          className="w-full h-full object-cover"
-        />
+      <a href={`https://www.youtube.com/watch?v=${videoId}`} target="_blank" rel="noopener noreferrer">
+        <div className="relative w-full h-48">
+          <img
+            loading="lazy"
+            src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="p-4">
+          <h3 className="text-lg font-semibold text-white">{title}</h3>
+          <p className="text-sm text-gray-400">{formattedDate}</p>
+        </div>
       </a>
-      <div className="p-4">
-        <h3 className="font-mono text-lg mb-2 text-green-400">{title}</h3>
-        <p className="text-neutral-400 text-sm">
-          {new Date(publishedAt).toLocaleDateString()}
-        </p>
-      </div>
     </motion.div>
   );
 };
 
-export default YouTubeVideo; 
+export default YouTubeVideo;

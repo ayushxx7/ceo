@@ -1,5 +1,6 @@
 import ShellBox from "@/components/ShellBox";
-import Link from 'next/link';
+import CommandBar from '@/components/TerminalCommandBar'
+
 
 const toolGroups = [
   {
@@ -134,17 +135,20 @@ const education = [
 
 export default function AboutPage() {
   return (
+        
     <div className="flex justify-center relative">
       {/* Main Content */}
       <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6">
         {/* Whoami Section */}
+        
+        <CommandBar />
         <ShellBox id="whoami">
           <div className="flex justify-between items-center">
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ whoami</p>
           </div>
           <p className="mt-2 text-white text-xs sm:text-sm md:text-base">
             <b>Ayush Mandowara</b> | New Delhi<br />
-            <a href="mailto:ayush.mandowara.97@gmail.com" className="text-green-400">ayush.mandowara.97@gmail.com</a> | 9818994579 | <a href="https://linkedin.com" className="text-green-400">LinkedIn</a> | <a href="https://blog" className="text-green-400">Blog</a> | <a href="https://github.com" className="text-green-400">GitHub</a>
+            <a href="mailto:ayush.mandowara.97@gmail.com" className="text-green-400">ayush.mandowara.97@gmail.com</a> | 9818994579 | <a href="https://linkedin.com" className="text-green-400">LinkedIn</a> | <a href="https://blog" className="text-green-400">Blog</a> | <a href="https://github.com/ayushxx7" className="text-green-400">GitHub</a>
             <br /><br />
             I am a passionate machine learning engineer with proven expertise in building highly scalable and robust solutions using core techniques of Data Science, Data Analytics, Deep Learning, Generative AI and Natural Language Processing. I also have a knack for Quality Assurance, especially Automated Test Suites and Product Management via JIRA.
             <br /><br />
@@ -156,9 +160,11 @@ export default function AboutPage() {
             I have also built automatic ticket classification systems, participated in hackathons (Top 15% in Black Friday Sales Prediction), and created bots for Facebook and WhatsApp using PyAutoGUI. Additionally, I have delivered over 30 knowledge transfer sessions and contributed to projects in game-playing AI and recommendation engines.<br /><br />
             Let&apos;s build, automate, and innovate — together.
           </p>
+          
         </ShellBox>
 
         {/* Education Section */}
+        
         <ShellBox id="education">
           <div className="flex justify-between items-center">
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ cat education.txt</p>
@@ -188,6 +194,9 @@ export default function AboutPage() {
             ))}
           </div>
         </ShellBox>
+        
+        
+        
 
         {/* Tools Section */}
         <ShellBox id="skills">
@@ -212,17 +221,15 @@ export default function AboutPage() {
             ))}
           </div>
         </ShellBox>
+        
 
-        <ShellBox>
-          {/* Home Link */}
-            <Link href="/" className="text-green-400 text-sm sm:text-base md:text-lg font-mono">
-              $ cd /home
-            </Link>
-        </ShellBox>
+
+        
+
       </div>
 
       {/* Vertical Section Indicator - fixed to right center */}
-      <div className="hidden lg:flex flex-col items-end gap-4 fixed right-0 top-1/2 -translate-y-1/2 z-50 pr-2">
+      <div className="flex flex-col items-end gap-4 fixed right-0 top-1/2 -translate-y-1/2 z-[999] pr-2">
         {sections.map((section) => (
           <div key={section.id} className="flex items-center gap-2 group">
             <a 
@@ -235,6 +242,7 @@ export default function AboutPage() {
           </div>
         ))}
       </div>
+
     </div>
   );
 }

@@ -1,7 +1,8 @@
 'use client';
 import ShellBox from "@/components/ShellBox";
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
+import CommandBar from '@/components/TerminalCommandBar'
 
 interface Experience {
   title: string;
@@ -204,6 +205,7 @@ export default function ExperiencePage() {
     <div className="flex justify-center relative">
       <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6">
         {/* Work Experience Section */}
+        <CommandBar/>
         <ShellBox id="experience">
           <div className="flex justify-between items-center">
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ ls ~/career/</p>
@@ -311,12 +313,7 @@ export default function ExperiencePage() {
           </div>
         </ShellBox>
 
-        <ShellBox>
-          {/* Home Link */}
-          <Link href="/" className="text-green-400 text-sm sm:text-base md:text-lg font-mono">
-              $ cd /home
-            </Link>
-        </ShellBox>
+        
       </div>
 
       {/* Vertical Section Indicator - fixed to right center */}

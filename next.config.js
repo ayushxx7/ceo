@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+  // No need for turbo or experimental configs unless necessary
+};
 
-module.exports = nextConfig 
- 
+module.exports = nextConfig;
