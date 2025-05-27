@@ -1,6 +1,7 @@
 'use client';
 
-import Terminal from '../components/Terminal'
+import Terminal from '../components/Terminal';
+import CommandBar from '@/components/TerminalCommandBar';
 import { useState } from 'react';
 
 export default function HomePage() {
@@ -8,6 +9,10 @@ export default function HomePage() {
 
   return (
     <main className="flex flex-col flex-1 min-h-[calc(100vh-12rem)] w-full items-center justify-center">
+      
+      {/* Keep CommandBar outside of layout-restricted divs */}
+      <CommandBar />
+
       <div className="w-full flex items-center justify-center relative z-10 px-4 flex-1">
         <div
           onMouseEnter={() => setTerminalHovered(true)}
@@ -18,5 +23,5 @@ export default function HomePage() {
         </div>
       </div>
     </main>
-  )
+  );
 }

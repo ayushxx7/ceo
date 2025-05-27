@@ -18,6 +18,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+      <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha512-Tbw1+0M9X9S0k4WhxHl6hFvHce7n+Ay0gYIo/ZUuNYvZYgrC84CnA1wFf1eROhB7cfPrWfQdwX7wOjjRFcGubw=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
         <meta property="og:title" content="Ayush Mandowara" />
         <meta property="og:description" content="Portfolio of Ayush Mandowara. Machine Learning Engineer with expertise in Data Science, Deep Learning, Generative AI, NLP, QA Automation, and Product Management." />
         <meta property="og:url" content="https://ayushmandowara.com" />
@@ -38,8 +45,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {/* Social Icons */}
           <div className="flex gap-4 md:gap-8 font-mono text-green-400 text-xl md:text-2xl bg-neutral-900/80 rounded-full px-6 md:px-8 py-2 shadow-sm relative">
             <a href="mailto:ayush.mandowara.97@gmail.com" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><MdEmail /></a>
-            <a href="https://github.com/ayushmandowara" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaGithub /></a>
-            <a href="https://linkedin.com/in/ayushmandowara" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaLinkedin /></a>
+            <a href="https://github.com/ayushxx7" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaGithub /></a>
+            <a href="https://www.linkedin.com/in/ayush-mandowara/" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaLinkedin /></a>
             <a href="https://twitter.com/ayushxx7" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaXTwitter /></a>
             <a href="https://youtube.com/@thevibecoder69" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaYoutube /></a>
             {/* Add blog or other links as needed */}
