@@ -27,6 +27,26 @@ interface OpenSource {
 
 const experiences: Experience[] = [
   {
+    title: "Lead Software Engineer",
+    company: "Virtusa",
+    period: "Jan 2025 – Present",
+    location: "Remote, India",
+    description: [
+      "Leading software engineering initiatives for enterprise clients in AI/ML space.",
+      "Architecting scalable solutions using Generative AI, LLMs, and cloud-native technologies.",
+      "Mentoring team of 5+ engineers and driving technical excellence."
+    ],
+    technologies: [
+      { name: "GenAI", color: "text-green-400 border-green-400" },
+      { name: "LLM", color: "text-blue-400 border-blue-400" },
+      { name: "AWS", color: "text-orange-400 border-orange-400" },
+      { name: "Python", color: "text-yellow-400 border-yellow-400" },
+      { name: "FastAPI", color: "text-purple-400 border-purple-400" }
+    ],
+    label: "Work",
+    logo: "/images/adeptmind-logo.png"
+  },
+  {
     title: "Machine Learning (GenAI) Engineer → Technical Project Manager - DLP Team",
     company: "adeptmind.ai",
     period: "Oct 2023 – Present",

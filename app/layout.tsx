@@ -37,9 +37,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <footer className="w-full flex flex-col items-center pb-4 md:pb-6 relative z-20 px-4">
           {/* Social Icons */}
           <div className="flex gap-4 md:gap-8 font-mono text-green-400 text-xl md:text-2xl bg-neutral-900/80 rounded-full px-6 md:px-8 py-2 shadow-sm relative">
-            <a href="mailto:ayush.mandowara.97@gmail.com" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><MdEmail /></a>
+            <a href="mailto:ayushxx7@gmail.com" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><MdEmail /></a>
             <a href="https://github.com/ayushmandowara" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaGithub /></a>
-            <a href="https://linkedin.com/in/kritika-maheshwari" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaLinkedin /></a>
+            <a href="https://linkedin.com/in/ayushmandowara" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaLinkedin /></a>
             <a href="https://twitter.com/ayushxx7" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaXTwitter /></a>
             <a href="https://youtube.com/@thevibecoder69" target="_blank" rel="noopener noreferrer" className="hover:text-green-200 transition-colors cursor-pointer relative z-10"><FaYoutube /></a>
             {/* Add blog or other links as needed */}

@@ -33,10 +33,11 @@ const LINES = [
       href: '' 
     }
    },
-  { prefix: '$ 🤖', text: 'GenAI | NLP | Data Science | Deep Learning', emoji: '', typing: false },
-  { prefix: '$ 🛠️', text: 'QA Automation | Product Management | JIRA', emoji: '', typing: false },
+  { prefix: '$ 📊', text: '6+ years experience', emoji: '', typing: false },
+  { prefix: '$ 🤖', text: 'GenAI | LLMs | NLP | Transformers', emoji: '', typing: false },
+  { prefix: '$ 🛠️', text: 'FastAPI | AWS | Kubernetes', emoji: '', typing: false },
   { prefix: '$ 🌏', text: 'New Delhi, India', emoji: '', typing: false },
-  { prefix: '$ ✉️', text: 'ayush.mandowara.97@gmail.com', emoji: '', typing: false },
+  { prefix: '$ ✉️', text: 'ayushxx7@gmail.com', emoji: '', typing: false },
 ]
 
 export default function Terminal() {

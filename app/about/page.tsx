@@ -144,9 +144,9 @@ export default function AboutPage() {
           </div>
           <p className="mt-2 text-white text-xs sm:text-sm md:text-base">
             <b>Ayush Mandowara</b> | New Delhi<br />
-            <a href="mailto:ayush.mandowara.97@gmail.com" className="text-green-400">ayush.mandowara.97@gmail.com</a> | 9818994579 | <a href="https://linkedin.com" className="text-green-400">LinkedIn</a> | <a href="https://blog" className="text-green-400">Blog</a> | <a href="https://github.com" className="text-green-400">GitHub</a>
+            <a href="mailto:ayushxx7@gmail.com" className="text-green-400">ayushxx7@gmail.com</a> | <a href="https://linkedin.com/in/ayushmandowara" className="text-green-400">LinkedIn</a> | <a href="https://github.com/ayushmandowara" className="text-green-400">GitHub</a>
             <br /><br />
-            I am a passionate machine learning engineer with proven expertise in building highly scalable and robust solutions using core techniques of Data Science, Data Analytics, Deep Learning, Generative AI and Natural Language Processing. I also have a knack for Quality Assurance, especially Automated Test Suites and Product Management via JIRA.
+            I am a passionate Lead Software Engineer with 6+ years of experience in building highly scalable and robust solutions using GenAI, LLMs, NLP, and Deep Learning. Currently leading AI/ML initiatives at Virtusa and formerly scaling in-house LLM services at Adeptmind.
             <br /><br />
             I have led ML and Generative AI initiatives, scaling in-house LLM services at adepthmind.ai, and developed automation suites and NLP-powered tools at BlueStacks and now.gg. 
             <br /><br />
