@@ -144,7 +144,7 @@ export default function AboutPage() {
           </div>
           <p className="mt-2 text-white text-xs sm:text-sm md:text-base">
             <b>Ayush Mandowara</b> | New Delhi<br />
-            <a href="mailto:ayushxx7@gmail.com" className="text-green-400">ayushxx7@gmail.com</a> | <a href="https://linkedin.com/in/ayushmandowara" className="text-green-400">LinkedIn</a> | <a href="https://github.com/ayushmandowara" className="text-green-400">GitHub</a>
+            <a href="mailto:ayushxx7@gmail.com" className="text-green-400">ayushxx7@gmail.com</a> | <a href="https://linkedin.com/in/ayush_mandowara" className="text-green-400">LinkedIn</a> | <a href="https://github.com/ayushmandowara" className="text-green-400">GitHub</a>
             <br /><br />
             I am a passionate Lead Software Engineer with 6+ years of experience in building highly scalable and robust solutions using GenAI, LLMs, NLP, and Deep Learning. Currently leading AI/ML initiatives at Virtusa and formerly scaling in-house LLM services at Adeptmind.
             <br /><br />
