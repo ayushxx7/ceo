@@ -13,29 +13,29 @@ const LINES = [
   },
 { 
     prefix: '$ 💼', 
-    text: 'Full Stack Engineer, ', 
+    text: 'Lead Software Engineer (GenAI), ', 
     emoji: '', 
     typing: false,
     highlight: { 
-      text: 'The Vibe Coder', 
+      text: 'Virtusa', 
       suffix: '', 
-      href: 'https://the-vibe-coder-69.github.io/www/' 
+      href: '' 
     }
    },
   { 
     prefix: '$ 👑', 
-    text: 'CEO: ', 
+    text: 'CEO (The Vibe Coder): ', 
     emoji: '', 
     typing: false,
     highlight: { 
       text: 'Kritika Maheshwari', 
       suffix: '', 
-      href: '' 
+      href: 'https://the-vibe-coder-69.github.io/www/' 
     }
    },
   { prefix: '$ 📊', text: '6+ years experience', emoji: '', typing: false },
-  { prefix: '$ 🤖', text: 'GenAI | LLMs | NLP | Transformers', emoji: '', typing: false },
-  { prefix: '$ 🛠️', text: 'FastAPI | AWS | Kubernetes', emoji: '', typing: false },
+  { prefix: '$ 🤖', text: 'GenAI | LLMs | NLP | MLOps', emoji: '', typing: false },
+  { prefix: '$ 🛠️', text: 'Python | AWS | GCP | Kubernetes', emoji: '', typing: false },
   { prefix: '$ 🌏', text: 'New Delhi, India', emoji: '', typing: false },
   { prefix: '$ ✉️', text: 'ayushxx7@gmail.com', emoji: '', typing: false },
 ]

@@ -5,80 +5,59 @@ const toolGroups = [
   {
     label: "Machine Learning",
     items: [
-      { name: "Regression (Linear, Logistic, Ridge, Lasso)", color: "text-blue-400 border-blue-400" },
-      { name: "SVM", color: "text-purple-400 border-purple-400" },
-      { name: "Decision Trees", color: "text-green-400 border-green-400" },
-      { name: "Random Forest", color: "text-green-300 border-green-300" },
-      { name: "Gradient Boosting", color: "text-yellow-400 border-yellow-400" },
+      { name: "Linear/Logistic Regression", color: "text-blue-400 border-blue-400" },
       { name: "XGBoost", color: "text-orange-400 border-orange-400" },
+      { name: "SVM", color: "text-purple-400 border-purple-400" },
       { name: "Clustering (K-Means, DBSCAN)", color: "text-pink-400 border-pink-400" },
-      { name: "Time Series Analysis", color: "text-cyan-400 border-cyan-400" },
+      { name: "Time Series", color: "text-cyan-400 border-cyan-400" },
     ],
   },
   {
     label: "Deep Learning",
     items: [
-      { name: "ANN", color: "text-fuchsia-400 border-fuchsia-400" },
       { name: "CNN", color: "text-blue-500 border-blue-500" },
-      { name: "RNN, GRU, LSTM", color: "text-purple-300 border-purple-300" },
+      { name: "RNN, LSTM, GRU", color: "text-purple-300 border-purple-300" },
       { name: "Transfer Learning", color: "text-emerald-400 border-emerald-400" },
-      { name: "Generative Pretrained Transformer", color: "text-orange-300 border-orange-300" },
+      { name: "Transformers", color: "text-orange-300 border-orange-300" },
     ],
   },
   {
     label: "Generative AI",
     items: [
-      { name: "LLMs", color: "text-green-400 border-green-400" },
-      { name: "OpenAI (gpt-3.5, gpt-4, gpt-4o-mini, chatgpt, SORA)", color: "text-blue-400 border-blue-400" },
-      { name: "x.ai Grok", color: "text-pink-400 border-pink-400" },
-      { name: "perplexity.ai", color: "text-cyan-400 border-cyan-400" },
-      { name: "GenAI Image/Video Generation", color: "text-yellow-400 border-yellow-400" },
+      { name: "OpenAI (GPT-4/o/mini)", color: "text-blue-400 border-blue-400" },
+      { name: "SORA", color: "text-pink-400 border-pink-400" },
+      { name: "Grok", color: "text-cyan-400 border-cyan-400" },
+      { name: "LangChain", color: "text-yellow-400 border-yellow-400" },
+      { name: "RAG", color: "text-green-400 border-green-400" },
       { name: "Prompt Engineering", color: "text-purple-400 border-purple-400" },
+      { name: "Agentic AI", color: "text-fuchsia-400 border-fuchsia-400" },
     ],
   },
   {
     label: "NLP",
     items: [
-      { name: "Lexical/Syntactic/Semantic Processing", color: "text-green-300 border-green-300" },
-      { name: "pandas, numpy, sklearn, scikit-learn, spacy", color: "text-blue-300 border-blue-300" },
-    ],
-  },
-  {
-    label: "Languages",
-    items: [
-      { name: "Python", color: "text-yellow-400 border-yellow-400" },
-      { name: "JavaScript", color: "text-blue-400 border-blue-400" },
-      { name: "Dart", color: "text-cyan-400 border-cyan-400" },
-      { name: "Flutter", color: "text-teal-400 border-teal-400" },
-    ],
-  },
-  {
-    label: "Web Development",
-    items: [
-      { name: "HTML, CSS, BootStrap", color: "text-pink-400 border-pink-400" },
-      { name: "Django, Flask, FastAPI", color: "text-green-400 border-green-400" },
-      { name: "React.js, Redux", color: "text-blue-500 border-blue-500" },
-      { name: "RabbitMQ, celery", color: "text-orange-400 border-orange-400" },
+      { name: "BERT, distilBERT", color: "text-green-300 border-green-300" },
+      { name: "spaCy", color: "text-blue-300 border-blue-300" },
+      { name: "HuggingFace", color: "text-yellow-300 border-yellow-300" },
+      { name: "Lexical/Semantic/Syntactic Parsing", color: "text-emerald-300 border-emerald-300" },
     ],
   },
   {
     label: "Cloud & MLOps",
     items: [
-      { name: "AWS, GCP, BigQuery", color: "text-orange-300 border-orange-300" },
-      { name: "AWS SageMaker", color: "text-green-400 border-green-400" },
-      { name: "Kubernetes", color: "text-blue-500 border-blue-500" },
-      { name: "Google Cloud Storage", color: "text-blue-300 border-blue-300" },
+      { name: "AWS (SageMaker, S3)", color: "text-orange-300 border-orange-300" },
+      { name: "GCP, BigQuery", color: "text-blue-400 border-blue-400" },
+      { name: "Docker, Kubernetes", color: "text-blue-500 border-blue-500" },
       { name: "Jenkins", color: "text-purple-400 border-purple-400" },
+      { name: "Prefect", color: "text-indigo-400 border-indigo-400" },
     ],
   },
   {
-    label: "Tools",
+    label: "Languages & Frameworks",
     items: [
-      { name: "Git, GitHub", color: "text-gray-300 border-gray-300" },
-      { name: "neoVim", color: "text-green-300 border-green-300" },
-      { name: "Android Studio", color: "text-blue-400 border-blue-400" },
-      { name: "JIRA", color: "text-orange-400 border-orange-400" },
-      { name: "Docker", color: "text-blue-300 border-blue-300" },
+      { name: "Python, JavaScript, Dart", color: "text-yellow-400 border-yellow-400" },
+      { name: "Flask, Django, FastAPI", color: "text-green-400 border-green-400" },
+      { name: "React, MCP, A2A", color: "text-blue-500 border-blue-500" },
     ],
   },
 ];
@@ -91,17 +70,17 @@ const sections = [
 
 const education = [
   {
-    degree: "Product Management & Agentic AI (Ongoing)",
-    school: "IIT Patna",
-    period: "2025",
+    degree: "Product Management & Agentic AI",
+    school: "IIT Patna x Masai",
+    period: "6 months",
     location: "Patna, India",
     address: "Bihar, India",
     type: "cert"
   },
   {
     degree: "Advanced Generative AI Certification",
-    school: "upGrad",
-    period: "2024",
+    school: "upGrad & Microsoft",
+    period: "7 months",
     location: "Online",
     address: "Online",
     type: "cert"
@@ -146,14 +125,10 @@ export default function AboutPage() {
             <b>Ayush Mandowara</b> | New Delhi<br />
             <a href="mailto:ayushxx7@gmail.com" className="text-green-400">ayushxx7@gmail.com</a> | <a href="https://linkedin.com/in/ayush_mandowara" className="text-green-400">LinkedIn</a> | <a href="https://github.com/ayushmandowara" className="text-green-400">GitHub</a>
             <br /><br />
-            I am a passionate Lead Software Engineer with 6+ years of experience in building highly scalable and robust solutions using GenAI, LLMs, NLP, and Deep Learning. Currently leading AI/ML initiatives at Virtusa and formerly scaling in-house LLM services at Adeptmind.
+            Machine Learning Engineer with 6+ years of experience building scalable solutions across NLP, GenAI, and Deep Learning. Currently a Lead Software Engineer (GenAI) at Virtusa, working on enterprise-grade conversational agents at scale.
             <br /><br />
-            I have led ML and Generative AI initiatives, scaling in-house LLM services at adepthmind.ai, and developed automation suites and NLP-powered tools at BlueStacks and now.gg. 
+            I have proven expertise in deploying LLM services, managing MLOps pipelines, and driving cross-functional product development. My background includes building high-revenue GenAI products from scratch, scaling LLM services to 100K+ requests/day, and leading AI initiatives at adeptmind.ai and BlueStacks.
             <br /><br />
-            My academic journey includes hands-on work in hierarchical text classification using contrastive learning and distilbert, video gesture recognition with MobileNet and GRU, and telecom churn analysis with PCA, XGBoost, and logistic regression. 
-            
-            <br /><br />
-            I have also built automatic ticket classification systems, participated in hackathons (Top 15% in Black Friday Sales Prediction), and created bots for Facebook and WhatsApp using PyAutoGUI. Additionally, I have delivered over 30 knowledge transfer sessions and contributed to projects in game-playing AI and recommendation engines.<br /><br />
             Let&apos;s build, automate, and innovate — together.
           </p>
         </ShellBox>

@@ -27,29 +27,28 @@ interface OpenSource {
 
 const experiences: Experience[] = [
   {
-    title: "Lead Software Engineer",
+    title: "Lead Software Engineer (GenAI) - client United Health Group",
     company: "Virtusa",
-    period: "Jan 2025 – Present",
-    location: "Remote, India",
+    period: "Aug 2025 – Present",
+    location: "Gurgaon, India",
     description: [
-      "Leading software engineering initiatives for enterprise clients in AI/ML space.",
-      "Architecting scalable solutions using Generative AI, LLMs, and cloud-native technologies.",
-      "Mentoring team of 5+ engineers and driving technical excellence."
+      "Working on Advocate Assist conversational agent for proactive chat support using leading GenAI solutions by Google Cloud Platform (gemini, DialogFlow CX, Playbooks).",
+      "Closely working with architect, Product Owner, Delivery Manager and Business to deliver production grade software at a scale of 10K to 100K calls per day."
     ],
     technologies: [
       { name: "GenAI", color: "text-green-400 border-green-400" },
-      { name: "LLM", color: "text-blue-400 border-blue-400" },
-      { name: "AWS", color: "text-orange-400 border-orange-400" },
-      { name: "Python", color: "text-yellow-400 border-yellow-400" },
-      { name: "FastAPI", color: "text-purple-400 border-purple-400" }
+      { name: "Gemini", color: "text-blue-400 border-blue-400" },
+      { name: "DialogFlow CX", color: "text-orange-400 border-orange-400" },
+      { name: "GCP", color: "text-yellow-400 border-yellow-400" },
+      { name: "Python", color: "text-purple-400 border-purple-400" }
     ],
     label: "Work",
-    logo: "/images/adeptmind-logo.png"
+    logo: "/images/ibm-logo.svg" // Placeholder as virtusa-logo is missing
   },
   {
-    title: "Machine Learning (GenAI) Engineer → Technical Project Manager - DLP Team",
+    title: "ML GenAI Engineer → Technical Project Manager - DLP Team",
     company: "adeptmind.ai",
-    period: "Oct 2023 – Present",
+    period: "Sep 2023 – May 2025",
     location: "Remote, Delhi, India",
     description: [
       "Built the high-revenue Dynamic Landing Pages (DLP) product from scratch under CTO guidance, leading ML/GenAI efforts to auto-generate SEO-optimized retail pages that improved Google rankings and boosted client footfall.",
@@ -67,48 +66,31 @@ const experiences: Experience[] = [
       { name: "Prefect", color: "text-purple-400 border-purple-400" }
     ],
     label: "Work",
-    logo: "/images/adeptmind-logo.png" // updated to .png
+    logo: "/images/adeptmind-logo.png"
   },
   {
     title: "Machine Learning (Natural Language Processing) Engineer - Search Team",
     company: "adeptmind.ai",
-    period: "Dec 2022 – Sep 2023",
+    period: "Apr 2022 – Sep 2023",
     location: "Remote, Toronto, Canada",
     description: [
       "Maintained Content Understand (CU) and Query Understanding (QU) Machine Learning components using PyTorch, HuggingFace, FastAPI, distilbert, nlp.",
-      "Built and deployed category & classification pipeline via AWS Sagemaker; migrated from TensorFlow."
+      "Built and deployed category & classification pipeline via AWS Sagemaker; deprecated Tensorflow.",
+      "Built scraping tools and live inventory software (Python, Go, TypeScript, SQL) for malls, retailers."
     ],
     technologies: [
       { name: "PyTorch", color: "text-orange-400 border-orange-400" },
       { name: "HuggingFace", color: "text-pink-400 border-pink-400" },
       { name: "FastAPI", color: "text-blue-400 border-blue-400" },
       { name: "AWS Sagemaker", color: "text-green-400 border-green-400" },
-      { name: "TensorFlow", color: "text-yellow-400 border-yellow-400" },
       { name: "distilbert", color: "text-purple-400 border-purple-400" }
     ],
     label: "Work",
-    logo: "/images/adeptmind-logo.png" // updated to .png
-  },
-  {
-    title: "Software Engineer - Data Team",
-    company: "adeptmind.ai",
-    period: "Apr 2022 – Nov 2022",
-    location: "Remote, Toronto, Canada",
-    description: [
-      "Built scraping tools and live inventory software (Python, Go, TypeScript, SQL) for malls."
-    ],
-    technologies: [
-      { name: "Python", color: "text-yellow-400 border-yellow-400" },
-      { name: "Go", color: "text-cyan-400 border-cyan-400" },
-      { name: "TypeScript", color: "text-blue-400 border-blue-400" },
-      { name: "SQL", color: "text-green-400 border-green-400" }
-    ],
-    label: "Work",
-    logo: "/images/adeptmind-logo.png" // updated to .png
+    logo: "/images/adeptmind-logo.png"
   },
   {
     title: "Senior Member of Technical Staff – QA Automation Team",
-    company: "now.gg",
+    company: "now.gg / BlueStacks.com",
     period: "Sep 2021 – Apr 2022",
     location: "Remote, Gurugram, India",
     description: [
@@ -117,9 +99,8 @@ const experiences: Experience[] = [
       "Regression models for revenue prediction & release funnel tracking (big data, p-value analysis)."
     ],
     technologies: [
-      { name: "QA Automation", color: "text-blue-400 border-blue-400" },
+      { name: "Python", color: "text-yellow-400 border-yellow-400" },
       { name: "Data Analysis", color: "text-cyan-400 border-cyan-400" },
-      { name: "Regression", color: "text-green-400 border-green-400" },
       { name: "Big Data", color: "text-orange-400 border-orange-400" }
     ],
     label: "Work",
@@ -132,17 +113,16 @@ const experiences: Experience[] = [
     location: "Remote/Onsite, Gurugram, India",
     description: [
       "Developed a multi-lingual PyTest-based automation suite for BlueStacks 5 (Windows 7, 8, 8.1, 10).",
-      "Developed NLP-powered tools over Zendesk Support for SEO, log analysis, and automated replies.",
+      "Developed NLP-powered tools over Zendesk for SEO, log analysis, and automated replies.",
       "Integrated and customized Kommunicate.io – DialogFlow live chat into Zendesk and App Player."
     ],
     technologies: [
       { name: "PyTest", color: "text-yellow-400 border-yellow-400" },
       { name: "NLP", color: "text-purple-400 border-purple-400" },
-      { name: "Zendesk", color: "text-blue-400 border-blue-400" },
       { name: "DialogFlow", color: "text-green-400 border-green-400" }
     ],
     label: "Work",
-    logo: "/images/now.gg-logo.png" // use now.gg logo for BlueStacks
+    logo: "/images/now.gg-logo.png"
   }
 ];
 
