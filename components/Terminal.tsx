@@ -11,9 +11,9 @@ const LINES = [
     typing: false,
     highlight: { text: 'Ayush Mandowara', suffix: '' }
   },
-  { 
+{ 
     prefix: '$ 💼', 
-    text: 'CEO, ', 
+    text: 'Full Stack Engineer, ', 
     emoji: '', 
     typing: false,
     highlight: { 
@@ -21,8 +21,18 @@ const LINES = [
       suffix: '', 
       href: 'https://the-vibe-coder-69.github.io/www/' 
     }
-  },
-  { prefix: '$ 💼', text: 'Machine Learning Engineer', emoji: '', typing: false },
+   },
+  { 
+    prefix: '$ 👑', 
+    text: 'CEO: ', 
+    emoji: '', 
+    typing: false,
+    highlight: { 
+      text: 'Kritika Maheshwari', 
+      suffix: '', 
+      href: '' 
+    }
+   },
   { prefix: '$ 🤖', text: 'GenAI | NLP | Data Science | Deep Learning', emoji: '', typing: false },
   { prefix: '$ 🛠️', text: 'QA Automation | Product Management | JIRA', emoji: '', typing: false },
   { prefix: '$ 🌏', text: 'New Delhi, India', emoji: '', typing: false },
