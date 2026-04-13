@@ -74,7 +74,7 @@ export default function Image() {
               marginTop: '16px',
             }}
           >
-            ceo-kappa.vercel.app
+            ayush-mandowara.vercel.app
           </div>
         </div>
       </div>

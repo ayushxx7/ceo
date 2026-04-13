@@ -9,12 +9,12 @@ import NavBar from '../components/NavBar';
 
 export const metadata: Metadata = {
   title: 'Ayush Mandowara — Senior GenAI Consultant & Builder',
-  description: 'Portfolio of Ayush Mandowara: Senior GenAI Consultant at Virtusa. Expert in LLMs, Agentic AI, RAG, NLP, MLOps, and full-stack AI/ML solutions. 7+ years of experience.',
-  metadataBase: new URL('https://ceo-kappa.vercel.app'),
+  description: 'Portfolio of Ayush Mandowara: Senior GenAI Consultant at Virtusa (UHG). Expert in LLMs, Agentic AI, RAG, NLP, MLOps, and full-stack AI/ML solutions. 7+ years of experience.',
+  metadataBase: new URL('https://ayush-mandowara.vercel.app'),
   openGraph: {
     title: 'Ayush Mandowara — Senior GenAI Consultant & Builder',
-    description: 'Portfolio of Ayush Mandowara: Senior GenAI Consultant at Virtusa. Expert in LLMs, Agentic AI, RAG, NLP, MLOps, and full-stack AI/ML solutions.',
-    url: 'https://ceo-kappa.vercel.app',
+    description: 'Portfolio of Ayush Mandowara: Senior GenAI Consultant at Virtusa (UHG). Expert in LLMs, Agentic AI, RAG, NLP, MLOps, and full-stack AI/ML solutions.',
+    url: 'https://ayush-mandowara.vercel.app',
     type: 'website',
     siteName: 'Ayush Mandowara Portfolio',
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Ayush Mandowara — Senior GenAI Consultant & Builder',
-    description: 'Portfolio of Ayush Mandowara: Senior GenAI Consultant at Virtusa. Expert in LLMs, Agentic AI, RAG, NLP, MLOps.',
+    description: 'Portfolio of Ayush Mandowara: Senior GenAI Consultant at Virtusa (UHG). Expert in LLMs, Agentic AI, RAG, NLP, MLOps.',
     images: ['/og-image'],
   },
 }
@@ -41,14 +41,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <meta property="og:title" content="Ayush Mandowara — Senior GenAI Consultant & Builder" />
-        <meta property="og:description" content="Portfolio of Ayush Mandowara: Senior GenAI Consultant at Virtusa. Expert in LLMs, Agentic AI, RAG, NLP, MLOps, and full-stack AI/ML solutions. 7+ years of experience." />
-        <meta property="og:url" content="https://ceo-kappa.vercel.app" />
+        <meta property="og:description" content="Portfolio of Ayush Mandowara: Senior GenAI Consultant at Virtusa (UHG). Expert in LLMs, Agentic AI, RAG, NLP, MLOps, and full-stack AI/ML solutions. 7+ years of experience." />
+        <meta property="og:url" content="https://ayush-mandowara.vercel.app" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://ceo-kappa.vercel.app/og-image" />
+        <meta property="og:image" content="https://ayush-mandowara.vercel.app/og-image" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ayush Mandowara — Senior GenAI Consultant & Builder" />
-        <meta name="twitter:description" content="Portfolio of Ayush Mandowara: Senior GenAI Consultant at Virtusa. Expert in LLMs, Agentic AI, RAG, NLP, MLOps, and full-stack AI/ML solutions." />
-        <meta name="twitter:image" content="https://ceo-kappa.vercel.app/og-image" />
+        <meta name="twitter:description" content="Portfolio of Ayush Mandowara: Senior GenAI Consultant at Virtusa (UHG). Expert in LLMs, Agentic AI, RAG, NLP, MLOps, and full-stack AI/ML solutions." />
+        <meta name="twitter:image" content="https://ayush-mandowara.vercel.app/og-image" />
       </head>
       <body className="bg-neutral-950 min-h-screen flex flex-col">
         <ParticleBackground />
