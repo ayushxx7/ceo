@@ -14,17 +14,6 @@ interface Experience {
   logo: string;
 }
 
-interface OpenSource {
-  title: string;
-  projects: {
-    name: string;
-    link: string;
-  }[];
-  period: string;
-  description: string[];
-  technologies: { name: string; color: string }[];
-}
-
 const experiences: Experience[] = [
   {
     title: "Senior GenAI Consultant (client: United Health Group)",
@@ -46,7 +35,7 @@ const experiences: Experience[] = [
       { name: "RAG", color: "text-cyan-400 border-cyan-400" }
     ],
     label: "Work",
-    logo: "/images/ibm-logo.svg" // Placeholder as virtusa-logo is missing
+    logo: "/images/virtusa-logo.svg"
   },
   {
     title: "ML GenAI Engineer → Technical Project Manager - DLP Team",
@@ -129,77 +118,8 @@ const experiences: Experience[] = [
   }
 ];
 
-const openSourceContributions: OpenSource[] = [
-  {
-    title: "Core Contributor",
-    projects: [
-      {
-        name: "DiceDB",
-        link: "https://github.com/DiceDB"
-      }
-    ],
-    period: "2024 - Present",
-    description: [
-      "Contributing to DiceDB, an open-source, fast, reactive, in-memory database optimized for modern hardware",
-      "Working on core features and performance optimizations",
-      "Collaborating with the community to improve documentation and code quality"
-    ],
-    technologies: [
-      { name: "Go", color: "text-cyan-400 border-cyan-400" },
-      { name: "Database", color: "text-blue-400 border-blue-400" },
-      { name: "Reactivity", color: "text-purple-400 border-purple-400" },
-      { name: "In-Memory", color: "text-green-400 border-green-400" }
-    ]
-  },
-  {
-    title: "Contributor",
-    projects: [
-      {
-        name: "Qiskit Localization",
-        link: "https://github.com/Qiskit/documentation"
-      },
-    ],
-    period: "Summer 2022",
-    description: [
-      "One of the top contributors during the Qiskit Localization Summer Sprint 2022",
-      "Received swag from the Qiskit team for contributions",
-      "Helped improve Qiskit documentation and localization"
-    ],
-    technologies: [
-      { name: "Documentation", color: "text-blue-400 border-blue-400" },
-      { name: "Localization", color: "text-green-400 border-green-400" },
-      { name: "Open Source", color: "text-purple-400 border-purple-400" }
-    ]
-  },
-  {
-    title: "Hacktoberfest Contributor",
-    projects: [
-      {
-        name: "Vertex",
-        link: "https://github.com/vertex-center/vertex"
-      },
-      {
-        name: "Ockam",
-        link: "https://github.com/build-trust/ockam"
-      }
-    ],
-    period: "Winter 2023",
-    description: [
-      "One of the top contributors during the Qiskit Localization Summer Sprint 2022",
-      "Received swag from the Qiskit team for contributions",
-      "Helped improve Qiskit documentation and localization"
-    ],
-    technologies: [
-      { name: "Go", color: "text-cyan-400 border-cyan-400" },
-      { name: "Server", color: "text-green-400 border-green-400" },
-      { name: "Open Source", color: "text-purple-400 border-purple-400" }
-    ]
-  }
-];
-
 const sections = [
   { id: 'experience', label: 'career' },
-  { id: 'open-source', label: 'opensource' },
 ];
 
 export default function ExperiencePage() {
@@ -251,60 +171,6 @@ export default function ExperiencePage() {
                     </ul>
                     <div className="mt-2 sm:mt-3 flex flex-wrap gap-1 sm:gap-2">
                       {exp.technologies.map((tech, i) => (
-                        <span
-                          key={i}
-                          className={`bg-neutral-800/80 border ${tech.color} rounded px-2 sm:px-3 py-0.5 sm:py-1 text-xs`}
-                        >
-                          {tech.name}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </ShellBox>
-
-        {/* Open Source Section */}
-        <ShellBox id="open-source">
-          <div className="flex justify-between items-center">
-            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ opensourcectl get all</p>
-          </div>
-          <div className="mt-4 sm:mt-6 space-y-6 sm:space-y-8">
-            {openSourceContributions.map((contribution, index) => (
-              <div key={index} className="text-white">
-                <div className="flex items-start gap-2">
-                  <span className="text-green-400 font-mono text-xs sm:text-sm">[Open Source]</span>
-                  <div className="flex-1">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h3 className="text-sm sm:text-base md:text-lg font-semibold">{contribution.title}</h3>
-                        <div className="flex flex-wrap gap-1 sm:gap-2 mt-1">
-                          {contribution.projects.map((project, i) => (
-                            <a 
-                              key={i}
-                              href={project.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-block bg-green-900/20 text-green-300 text-xs sm:text-sm px-2 py-0.5 sm:py-1 rounded-md hover:bg-green-900/30 transition-colors"
-                            >
-                              {project.name}
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-green-400 text-xs sm:text-sm">{contribution.period}</p>
-                      </div>
-                    </div>
-                    <ul className="mt-2 sm:mt-3 space-y-1 sm:space-y-2">
-                      {contribution.description.map((item, i) => (
-                        <li key={i} className="text-neutral-300 text-xs sm:text-sm">• {item}</li>
-                      ))}
-                    </ul>
-                    <div className="mt-2 sm:mt-3 flex flex-wrap gap-1 sm:gap-2">
-                      {contribution.technologies.map((tech, i) => (
                         <span
                           key={i}
                           className={`bg-neutral-800/80 border ${tech.color} rounded px-2 sm:px-3 py-0.5 sm:py-1 text-xs`}

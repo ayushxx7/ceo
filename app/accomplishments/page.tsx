@@ -64,22 +64,8 @@ const accomplishments: Accomplishment[] = [
     },
     {
         id: 6,
-        title: "Certified Kubernetes Application Developer (CKAD)",
-        description: "Achieved success in the CKAD exam securing my certification in the first attempt hosted by CNCF. Mastering Kubernetes for MLOps and scaling services.",
-        date: "2024",
-        category: "certification",
-    },
-    {
-        id: 7,
-        title: "Qiskit Advocate & Localization Contributor",
-        description: "Recognized as a Qiskit Advocate and top contributor in Qiskit Localization Summer Sprint 2022. Deeply involved in the quantum computing community.",
-        date: "2022",
-        category: "open source",
-    },
-    {
-        id: 8,
         title: "Video Gesture Recognition Research",
-        description: "Researched and implemented gesture recognition systems using Deep Learning (MobileNet + GRU) during academic projects.",
+        description: "Researched and implemented gesture recognition systems using Deep Learning (MobileNet + GRU) achieving 92% validation accuracy during academic projects.",
         date: "2022",
         category: "recognition",
     }

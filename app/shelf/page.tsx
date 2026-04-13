@@ -42,58 +42,72 @@ const staticBlogPosts: BlogPost[] = [
   {
     id: "rl-05",
     title: "Deep Reinforcement Learning",
-    excerpt: "A deep dive into advanced reinforcement learning techniques and architectures.",
-    date: "2023-11-01",
-    url: "http://ayush-blog.netlify.app//ReinforcementLearning/05-Deep-Reinforcement-Learning/"
-  },
-  {
-    id: "ml-main",
-    title: "Machine Learning Overview",
-    excerpt: "Comprehensive guide to machine learning concepts, algorithms, and applications.",
-    date: "2023-10-15",
-    url: "http://ayush-blog.netlify.app//machine-learning"
+    excerpt: "A deep dive into advanced reinforcement learning techniques, architectures, and the frontier of AI decision-making systems.",
+    date: "2022-04-04",
+    url: "https://ayush-blog.netlify.app/ReinforcementLearning/05-Deep-Reinforcement-Learning/"
   },
   {
     id: "rl-04",
     title: "Model-Free Methods in RL",
-    excerpt: "Understanding model-free approaches in reinforcement learning.",
-    date: "2023-09-20",
-    url: "http://ayush-blog.netlify.app//ReinforcementLearning/04-Model-Free-Methods/"
+    excerpt: "Understanding model-free approaches — Monte Carlo, Temporal Difference, and Q-Learning — in reinforcement learning.",
+    date: "2022-03-21",
+    url: "https://ayush-blog.netlify.app/ReinforcementLearning/04-Model-Free-Methods/"
   },
   {
-    id: "pca",
-    title: "Principal Component Analysis",
-    excerpt: "Dimensionality reduction using PCA in machine learning pipelines.",
-    date: "2023-08-10",
-    url: "http://ayush-blog.netlify.app//PredictiveAnalysis/16-Pricipal-Component-Analysis/"
+    id: "rl-01",
+    title: "Classical Reinforcement Learning",
+    excerpt: "Introduction to classical RL methods, Markov Decision Processes, and the foundations of intelligent agents.",
+    date: "2022-03-03",
+    url: "https://ayush-blog.netlify.app/ReinforcementLearning/01-Classical-Reinforcement-Learning/"
   },
   {
-    id: "rf",
-    title: "Random Forest",
-    excerpt: "How Random Forests work and why they are so powerful for classification tasks.",
-    date: "2023-07-05",
-    url: "http://ayush-blog.netlify.app//PredictiveAnalysis/13-Random-Forest/"
+    id: "backprop",
+    title: "Backpropagation",
+    excerpt: "The algorithm behind training neural networks — computing gradients through the chain rule and updating weights via gradient descent.",
+    date: "2021-12-25",
+    url: "https://ayush-blog.netlify.app/DeepLearning/03-Backpropagation/"
   },
   {
     id: "cnn",
-    title: "Convolutional Neural Networks (CNN)",
-    excerpt: "Introduction to CNNs and their applications in image processing.",
-    date: "2023-06-15",
-    url: "http://ayush-blog.netlify.app//DeepLearning/04-CNN/"
+    title: "Convolutional Neural Networks (CNNs)",
+    excerpt: "Introduction to CNNs, convolution operations, pooling layers, and their applications in image processing and computer vision.",
+    date: "2021-12-23",
+    url: "https://ayush-blog.netlify.app/DeepLearning/04-CNN/"
   },
   {
     id: "lstm-gru",
     title: "LSTM & GRU Networks",
-    excerpt: "Exploring advanced recurrent neural network architectures: LSTM and GRU.",
-    date: "2023-05-10",
-    url: "http://ayush-blog.netlify.app//DeepLearning/07-LSTM-GRU/"
+    excerpt: "Exploring advanced recurrent neural network architectures — Long Short-Term Memory and Gated Recurrent Units for sequence modeling.",
+    date: "2021-12-23",
+    url: "https://ayush-blog.netlify.app/DeepLearning/07-LSTM-GRU/"
+  },
+  {
+    id: "rnn",
+    title: "Recurrent Neural Networks (RNNs)",
+    excerpt: "Understanding sequential data processing, vanishing gradients, and how RNNs handle time-series and temporal dependencies.",
+    date: "2021-12-13",
+    url: "https://ayush-blog.netlify.app/DeepLearning/06-Recurrent-Neural-Networks/"
+  },
+  {
+    id: "pca",
+    title: "Principal Component Analysis",
+    excerpt: "Dimensionality reduction using PCA — understanding variance, eigenvectors, and feature compression in ML pipelines.",
+    date: "2021-10-18",
+    url: "https://ayush-blog.netlify.app/PredictiveAnalysis/16-Pricipal-Component-Analysis/"
+  },
+  {
+    id: "random-forest",
+    title: "Random Forest",
+    excerpt: "How Random Forests work — ensemble learning, bagging, and why they are so powerful for classification and regression tasks.",
+    date: "2021-09-29",
+    url: "https://ayush-blog.netlify.app/PredictiveAnalysis/13-Random-Forest/"
   },
   {
     id: "topic-modelling",
     title: "Topic Modelling in NLP",
-    excerpt: "Techniques for extracting topics from text using NLP.",
-    date: "2023-04-01",
-    url: "http://ayush-blog.netlify.app//NLP/09-Topic-Modelling/"
+    excerpt: "Techniques for extracting latent topics from text corpora using NLP methods like LDA and probabilistic modeling.",
+    date: "2021-12-01",
+    url: "https://ayush-blog.netlify.app/NLP/09-Topic-Modelling/"
   }
 ];
 
@@ -269,11 +283,16 @@ const DigitalShelf = () => {
             {loading ? (
               <div className="text-green-400 text-center py-8">Loading videos...</div>
             ) : error ? (
-                <div className="text-red-400 text-center py-8">
-                    🐢 Hmm... that took a wrong turn
-                    <p className="text-sm mt-2 text-neutral-400">
-                      Let&apos;s try that again. Maybe the internet turtles are tired 🐢💤
-                    </p>
+                <div className="text-center py-8">
+                    <p className="text-green-400 text-sm mb-3">YouTube API is not configured, but you can still watch my videos on YouTube.</p>
+                    <a
+                        href="https://www.youtube.com/@thevibecoder69"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-mono text-sm px-4 py-2 rounded-full transition-colors"
+                    >
+                        Watch on YouTube →
+                    </a>
                 </div>
             ) : videos.length === 0 ? (
               <div className="text-green-400 text-center py-8">No videos found</div>
