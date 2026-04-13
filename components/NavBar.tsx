@@ -24,7 +24,7 @@ export default function NavBar() {
           <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
           <Link href="/projects" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">projects</Link>
           <span className="text-neutral-700 select-none self-center hidden md:inline">|</span>
-          <Link href="/blog" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">blog</Link>
+          <Link href="/shelf" className="px-2 sm:px-3 md:px-6 py-1 hover:text-green-300 transition-colors whitespace-nowrap">digital shelf</Link>
         </div>
         <button
           className="md:hidden flex flex-col justify-center items-center w-10 h-10 ml-auto text-green-400 focus:outline-none bg-neutral-900/30 backdrop-blur-sm rounded-full"

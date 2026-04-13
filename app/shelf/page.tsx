@@ -173,6 +173,9 @@ const DigitalShelf = () => {
 
   return (
     <div className="flex justify-center relative min-h-screen overflow-x-hidden">
+      {/* H1 for SEO */}
+      <h1 className="sr-only">Digital Shelf — Ayush Mandowara&apos;s Blogs & Videos</h1>
+
       <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6 py-20">
                 {/* Blog Section */}
                 <ShellBox id="blogs">

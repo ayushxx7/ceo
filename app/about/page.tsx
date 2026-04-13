@@ -22,15 +22,38 @@ const toolGroups = [
     ],
   },
   {
-    label: "Generative AI",
+    label: "Generative AI & LLMs",
     items: [
       { name: "OpenAI (GPT-4/o/mini)", color: "text-blue-400 border-blue-400" },
-      { name: "SORA", color: "text-pink-400 border-pink-400" },
-      { name: "Grok", color: "text-cyan-400 border-cyan-400" },
+      { name: "Claude (Anthropic)", color: "text-green-400 border-green-400" },
+      { name: "Google Gemini", color: "text-yellow-400 border-yellow-400" },
+      { name: "Llama (Meta)", color: "text-cyan-400 border-cyan-400" },
+      { name: "Mistral", color: "text-pink-400 border-pink-400" },
+      { name: "SORA", color: "text-fuchsia-400 border-fuchsia-400" },
+      { name: "Grok", color: "text-emerald-400 border-emerald-400" },
+    ],
+  },
+  {
+    label: "Agentic AI & Frameworks",
+    items: [
       { name: "LangChain", color: "text-yellow-400 border-yellow-400" },
-      { name: "RAG", color: "text-green-400 border-green-400" },
-      { name: "Prompt Engineering", color: "text-purple-400 border-purple-400" },
-      { name: "Agentic AI", color: "text-fuchsia-400 border-fuchsia-400" },
+      { name: "CrewAI", color: "text-green-400 border-green-400" },
+      { name: "AutoGen", color: "text-blue-400 border-blue-400" },
+      { name: "CAMEL", color: "text-purple-400 border-purple-400" },
+      { name: "RAG Pipelines", color: "text-cyan-400 border-cyan-400" },
+      { name: "Prompt Engineering", color: "text-orange-400 border-orange-400" },
+      { name: "Agentic Workflows", color: "text-fuchsia-400 border-fuchsia-400" },
+    ],
+  },
+  {
+    label: "Vector Databases",
+    items: [
+      { name: "ChromaDB", color: "text-green-300 border-green-300" },
+      { name: "Pinecone", color: "text-blue-300 border-blue-300" },
+      { name: "Weaviate", color: "text-yellow-300 border-yellow-300" },
+      { name: "Qdrant", color: "text-purple-400 border-purple-400" },
+      { name: "pgvector", color: "text-cyan-400 border-cyan-400" },
+      { name: "FAISS", color: "text-pink-400 border-pink-400" },
     ],
   },
   {
@@ -46,10 +69,11 @@ const toolGroups = [
     label: "Cloud & MLOps",
     items: [
       { name: "AWS (SageMaker, S3)", color: "text-orange-300 border-orange-300" },
-      { name: "GCP, BigQuery", color: "text-blue-400 border-blue-400" },
+      { name: "GCP (Vertex AI, BigQuery)", color: "text-blue-400 border-blue-400" },
       { name: "Docker, Kubernetes", color: "text-blue-500 border-blue-500" },
-      { name: "Jenkins", color: "text-purple-400 border-purple-400" },
+      { name: "Jenkins, GitHub Actions", color: "text-purple-400 border-purple-400" },
       { name: "Prefect", color: "text-indigo-400 border-indigo-400" },
+      { name: "Celery, Redis", color: "text-red-400 border-red-400" },
     ],
   },
   {
@@ -57,7 +81,8 @@ const toolGroups = [
     items: [
       { name: "Python, JavaScript, Dart", color: "text-yellow-400 border-yellow-400" },
       { name: "Flask, Django, FastAPI", color: "text-green-400 border-green-400" },
-      { name: "React, MCP, A2A", color: "text-blue-500 border-blue-500" },
+      { name: "React, Vue.js", color: "text-blue-500 border-blue-500" },
+      { name: "MCP, A2A Protocol", color: "text-cyan-400 border-cyan-400" },
     ],
   },
 ];
@@ -116,18 +141,25 @@ export default function AboutPage() {
     <div className="flex justify-center relative">
       {/* Main Content */}
       <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6">
+        {/* H1 for SEO */}
+        <h1 className="sr-only">About Ayush Mandowara — Senior GenAI Consultant & Builder</h1>
+
         {/* Whoami Section */}
         <ShellBox id="whoami">
           <div className="flex justify-between items-center">
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ whoami</p>
           </div>
           <p className="mt-2 text-white text-xs sm:text-sm md:text-base">
-            <b>Ayush Mandowara</b> | New Delhi<br />
-            <a href="mailto:ayushxx7@gmail.com" className="text-green-400">ayushxx7@gmail.com</a> | <a href="https://linkedin.com/in/ayush_mandowara" className="text-green-400">LinkedIn</a> | <a href="https://github.com/ayushmandowara" className="text-green-400">GitHub</a>
+            <b>Ayush Mandowara</b> | New Delhi, India<br />
+            <a href="mailto:ayushxx7@gmail.com" className="text-green-400">ayushxx7@gmail.com</a> | <a href="https://linkedin.com/in/ayush-mandowara" className="text-green-400">LinkedIn</a> | <a href="https://github.com/ayushxx7" className="text-green-400">GitHub</a>
             <br /><br />
-            Machine Learning Engineer with 6+ years of experience building scalable solutions across NLP, GenAI, and Deep Learning. Currently a Lead Software Engineer (GenAI) at Virtusa, working on enterprise-grade conversational agents at scale.
+            <span className="text-green-300 font-semibold">Senior GenAI Consultant</span> at Virtusa, where I serve as a consultant for United Health Group (UHG), building enterprise-grade conversational AI agents at scale using Gemini, Dialogflow CX, and Google Cloud Platform. I specialize in designing and deploying production-grade LLM solutions, RAG pipelines, agentic workflows, and full-stack AI systems that handle 10K–100K+ calls per day.
             <br /><br />
-            I have proven expertise in deploying LLM services, managing MLOps pipelines, and driving cross-functional product development. My background includes building high-revenue GenAI products from scratch, scaling LLM services to 100K+ requests/day, and leading AI initiatives at adeptmind.ai and BlueStacks.
+            With <span className="text-green-300 font-semibold">7+ years of experience</span> across ML, NLP, GenAI, MLOps, and technical project management, I have built high-revenue GenAI products from scratch, scaled LLM services to 100K+ requests/day, and led cross-functional teams at companies like adeptmind.ai and BlueStacks/now.gg.
+            <br /><br />
+            My expertise spans the entire AI/ML lifecycle — from data ingestion and model training to deployment, monitoring, and continuous optimization. I work with cutting-edge tools like CrewAI, AutoGen, ChromaDB, Pinecone, Weaviate, Qdrant, and multi-LLM providers (GPT, Claude, Gemini, Llama, Mistral).
+            <br /><br />
+            Beyond my day role, I create content as <span className="text-green-300 font-semibold">&quot;The Vibe Coder&quot;</span> on YouTube (<a href="https://youtube.com/@thevibecoder69" className="text-green-400">@thevibecoder69</a>), sharing knowledge about AI, coding, and the future of intelligent systems.
             <br /><br />
             Let&apos;s build, automate, and innovate — together.
           </p>
@@ -162,6 +194,9 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+          <p className="mt-4 text-neutral-400 text-xs italic">
+            Note: The PG Diploma (IIIT Bangalore) and Master&apos;s (Liverpool John Moores) were part of a coupled dual-program through upGrad — the PG Diploma served as the first year, followed by the Master&apos;s certification as a continuation, making the combined program feel like a ~2-year journey.
+          </p>
         </ShellBox>
 
         {/* Tools Section */}

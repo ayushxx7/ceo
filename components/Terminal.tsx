@@ -4,38 +4,38 @@ import { useState, useEffect } from 'react'
 const LINES = [
   { prefix: '$', text: 'welcome.sh', emoji: '', typing: true },
   { prefix: '', text: '', emoji: '', typing: false },
-  { 
-    prefix: '$ 👋🏻', 
-    text: "Hey, I'm ", 
-    emoji: '', 
+  {
+    prefix: '$ 👋🏻',
+    text: "Hey, I'm ",
+    emoji: '',
     typing: false,
     highlight: { text: 'Ayush Mandowara', suffix: '' }
   },
-{ 
-    prefix: '$ 💼', 
-    text: 'Lead Software Engineer (GenAI), ', 
-    emoji: '', 
+{
+    prefix: '$ 💼',
+    text: 'Senior GenAI Consultant, ',
+    emoji: '',
     typing: false,
-    highlight: { 
-      text: 'Virtusa', 
-      suffix: '', 
-      href: '' 
+    highlight: {
+      text: 'Virtusa (UHG)',
+      suffix: '',
+      href: ''
     }
    },
-  { 
-    prefix: '$ 👑', 
-    text: 'CEO (The Vibe Coder): ', 
-    emoji: '', 
+  {
+    prefix: '$ 👑',
+    text: 'The Vibe Coder — CEO: ',
+    emoji: '',
     typing: false,
-    highlight: { 
-      text: 'Kritika Maheshwari', 
-      suffix: '', 
-      href: 'https://the-vibe-coder-69.github.io/www/' 
+    highlight: {
+      text: 'Kritika Maheshwari',
+      suffix: '',
+      href: 'https://the-vibe-coder-69.github.io/www/'
     }
    },
-  { prefix: '$ 📊', text: '6+ years experience', emoji: '', typing: false },
-  { prefix: '$ 🤖', text: 'GenAI | LLMs | NLP | MLOps', emoji: '', typing: false },
-  { prefix: '$ 🛠️', text: 'Python | AWS | GCP | Kubernetes', emoji: '', typing: false },
+  { prefix: '$ 📊', text: '7+ years experience', emoji: '', typing: false },
+  { prefix: '$ 🤖', text: 'GenAI | LLMs | Agentic AI | RAG | NLP', emoji: '', typing: false },
+  { prefix: '$ 🛠️', text: 'Python | AWS | GCP | Kubernetes | CrewAI', emoji: '', typing: false },
   { prefix: '$ 🌏', text: 'New Delhi, India', emoji: '', typing: false },
   { prefix: '$ ✉️', text: 'ayushxx7@gmail.com', emoji: '', typing: false },
 ]

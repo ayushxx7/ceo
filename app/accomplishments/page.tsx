@@ -123,6 +123,9 @@ export default function Accomplishments() {
 
   return (
     <div className="flex justify-center relative">
+      {/* H1 for SEO */}
+      <h1 className="sr-only">Accomplishments — Ayush Mandowara&apos;s Certifications & Awards</h1>
+
       <div className="flex-1 max-w-2xl space-y-4 sm:space-y-6 px-3 sm:px-6">
         <ShellBox>
         <div className="flex justify-between items-center">
@@ -143,6 +146,7 @@ export default function Accomplishments() {
                 <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
+                    aria-label="Filter accomplishments by category"
                     className="appearance-none bg-transparent pr-5 py-0 text-green-400 text-xs sm:text-sm font-mono focus:outline-none cursor-pointer h-5 sm:h-6 min-w-[1.5rem]"
                     style={{
                     minWidth: '1.0rem',

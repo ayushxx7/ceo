@@ -7,7 +7,8 @@ export default function HomePage() {
   const [terminalHovered, setTerminalHovered] = useState(false);
 
   return (
-    <main className="flex flex-col flex-1 min-h-[calc(100vh-12rem)] w-full items-center justify-center">
+    <div className="flex flex-col flex-1 min-h-[calc(100vh-12rem)] w-full items-center justify-center">
+      <h1 className="sr-only">Ayush Mandowara — Senior GenAI Consultant & Builder</h1>
       <div className="w-full flex items-center justify-center relative z-10 px-4 flex-1">
         <div
           onMouseEnter={() => setTerminalHovered(true)}
@@ -17,6 +18,6 @@ export default function HomePage() {
           <Terminal />
         </div>
       </div>
-    </main>
+    </div>
   )
 }

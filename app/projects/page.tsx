@@ -123,6 +123,9 @@ export default function ProjectsPage() {
 	return (
 		<div className="flex justify-center relative">
 			<div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6">
+				{/* H1 for SEO */}
+				<h1 className="sr-only">Projects — Ayush Mandowara&apos;s Portfolio</h1>
+
 				<ShellBox>
 					<div className="flex justify-between items-center">
 						<p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">
@@ -130,16 +133,21 @@ export default function ProjectsPage() {
 						</p>
 					</div>
 
+					<p className="mt-3 text-neutral-300 text-xs sm:text-sm">
+						A curated selection of open-source projects and personal experiments spanning GenAI, machine learning, NLP, and automation tools. Each project represents real-world problem-solving with production-grade code. Explore the repositories to see implementation details, commit history, and community contributions.
+					</p>
+
 					<div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
 						{currentProjects.map((project, index) => (
 							<ProjectCard key={index} {...project} />
 						))}
 					</div>
 
-					<div className="flex justify-center items-center gap-2 sm:gap-4 mt-6">
+					<div className="flex justify-center items-center gap-2 sm:gap-4 mt-6" role="navigation" aria-label="Pagination">
 						<button
 							onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
 							disabled={currentPage === 1}
+							aria-label="Previous page"
 							className={`p-1 sm:p-2 rounded-full ${
 								currentPage === 1
 									? 'text-neutral-700 cursor-not-allowed'
@@ -154,6 +162,8 @@ export default function ProjectsPage() {
 								<button
 									key={page}
 									onClick={() => setCurrentPage(page)}
+									aria-label={`Page ${page}`}
+									aria-current={currentPage === page ? 'page' : undefined}
 									className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full font-mono text-xs sm:text-sm ${
 										currentPage === page
 											? 'bg-green-400 text-neutral-950'
@@ -168,6 +178,7 @@ export default function ProjectsPage() {
 						<button
 							onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
 							disabled={currentPage === totalPages}
+							aria-label="Next page"
 							className={`p-1 sm:p-2 rounded-full ${
 								currentPage === totalPages
 									? 'text-neutral-700 cursor-not-allowed'

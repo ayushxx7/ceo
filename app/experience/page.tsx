@@ -27,20 +27,23 @@ interface OpenSource {
 
 const experiences: Experience[] = [
   {
-    title: "Lead Software Engineer (GenAI) - client United Health Group",
+    title: "Senior GenAI Consultant (client: United Health Group)",
     company: "Virtusa",
     period: "Aug 2025 – Present",
     location: "Gurgaon, India",
     description: [
-      "Working on Advocate Assist conversational agent for proactive chat support using leading GenAI solutions by Google Cloud Platform (gemini, DialogFlow CX, Playbooks).",
-      "Closely working with architect, Product Owner, Delivery Manager and Business to deliver production grade software at a scale of 10K to 100K calls per day."
+      "Leading development of Advocate Assist — an enterprise-grade conversational AI agent for proactive healthcare support, built on Google Cloud Platform using Gemini 2.0, Dialogflow CX, and Playbooks.",
+      "Architecting production-grade AI systems handling 10K–100K+ calls/day with sub-second latency, serving thousands of healthcare advocates and members.",
+      "Collaborating directly with solution architects, product owners, delivery managers, and UHG business stakeholders to define AI strategy, delivery roadmaps, and success metrics.",
+      "Driving best practices in prompt engineering, RAG pipeline design, evaluation frameworks, and responsible AI governance for healthcare-domain applications."
     ],
     technologies: [
       { name: "GenAI", color: "text-green-400 border-green-400" },
-      { name: "Gemini", color: "text-blue-400 border-blue-400" },
-      { name: "DialogFlow CX", color: "text-orange-400 border-orange-400" },
+      { name: "Gemini 2.0", color: "text-blue-400 border-blue-400" },
+      { name: "Dialogflow CX", color: "text-orange-400 border-orange-400" },
       { name: "GCP", color: "text-yellow-400 border-yellow-400" },
-      { name: "Python", color: "text-purple-400 border-purple-400" }
+      { name: "Python", color: "text-purple-400 border-purple-400" },
+      { name: "RAG", color: "text-cyan-400 border-cyan-400" }
     ],
     label: "Work",
     logo: "/images/ibm-logo.svg" // Placeholder as virtusa-logo is missing
@@ -202,12 +205,18 @@ const sections = [
 export default function ExperiencePage() {
   return (
     <div className="flex justify-center relative">
+      {/* H1 for SEO */}
+      <h1 className="sr-only">Experience — Ayush Mandowara&apos;s Career Journey</h1>
+
       <div className="flex-1 max-w-2xl space-y-6 px-4 sm:px-6">
         {/* Work Experience Section */}
         <ShellBox id="experience">
           <div className="flex justify-between items-center">
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ ls ~/career/</p>
           </div>
+          <p className="mt-3 text-neutral-300 text-xs sm:text-sm">
+            Over 7+ years of building and scaling AI/ML systems across startups and enterprises. From hands-on ML engineering to technical project management, my journey spans the full spectrum of AI product development — from ideation and prototyping to production deployment and continuous optimization.
+          </p>
           <div className="mt-4 sm:mt-6 space-y-6 sm:space-y-8">
             {experiences.map((exp, index) => (
               <div key={index} className="text-white">
