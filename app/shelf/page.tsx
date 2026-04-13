@@ -280,18 +280,62 @@ const DigitalShelf = () => {
             <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/videos</p>
           </div>
           <div className="mt-8">
+            {/* Featured Playlists - always visible */}
+            <div className="mb-8">
+              <p className="text-green-400 font-mono text-xs sm:text-sm mb-4"># featured playlists</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <a
+                  href="https://www.youtube.com/watch?v=sZvQLwyhaQQ&list=PLiu0voyovBbgT62duJNgijapofTepelZm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group"
+                >
+                  <div className="relative aspect-video rounded-lg overflow-hidden border border-neutral-700 group-hover:border-green-400/50 transition-colors">
+                    <img
+                      src="https://img.youtube.com/vi/sZvQLwyhaQQ/hqdefault.jpg"
+                      alt="AI Music Videos playlist"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                      <span className="text-green-400 font-mono text-sm px-3 py-1 bg-neutral-900/80 rounded-full border border-green-400/30">▶ playlist</span>
+                    </div>
+                  </div>
+                  <h3 className="font-mono text-sm sm:text-base mt-2 text-green-400 group-hover:text-green-300 transition-colors">AI Music Videos</h3>
+                  <p className="text-neutral-500 text-xs font-mono">The Vibe Coder</p>
+                </a>
+                <a
+                  href="https://www.youtube.com/watch?v=gohsQNq1V_Q&list=PLiu0voyovBbirNb1Cwi1m7JB9jtE_x5B9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group"
+                >
+                  <div className="relative aspect-video rounded-lg overflow-hidden border border-neutral-700 group-hover:border-green-400/50 transition-colors">
+                    <img
+                      src="https://img.youtube.com/vi/gohsQNq1V_Q/hqdefault.jpg"
+                      alt="AI Agents Exploration playlist"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                      <span className="text-green-400 font-mono text-sm px-3 py-1 bg-neutral-900/80 rounded-full border border-green-400/30">▶ playlist</span>
+                    </div>
+                  </div>
+                  <h3 className="font-mono text-sm sm:text-base mt-2 text-green-400 group-hover:text-green-300 transition-colors">AI Agents Exploration</h3>
+                  <p className="text-neutral-500 text-xs font-mono">The Vibe Coder</p>
+                </a>
+              </div>
+            </div>
+
             {loading ? (
               <div className="text-green-400 text-center py-8">Loading videos...</div>
             ) : error ? (
                 <div className="text-center py-8">
-                    <p className="text-green-400 text-sm mb-3">YouTube API is not configured, but you can still watch my videos on YouTube.</p>
                     <a
                         href="https://www.youtube.com/@thevibecoder69"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-mono text-sm px-4 py-2 rounded-full transition-colors"
+                        className="text-green-400/70 hover:text-green-300 font-mono text-sm transition-colors underline underline-offset-4 decoration-green-400/30 hover:decoration-green-300"
                     >
-                        Watch on YouTube →
+                        $ open https://youtube.com/@thevibecoder69
                     </a>
                 </div>
             ) : videos.length === 0 ? (
