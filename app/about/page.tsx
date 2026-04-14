@@ -147,7 +147,7 @@ export default function AboutPage() {
         {/* Whoami Section */}
         <ShellBox id="whoami">
           <div className="flex justify-between items-center">
-            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ whoami</p>
+            <a href="#whoami" className="text-green-400 text-sm sm:text-base md:text-lg font-mono hover:text-green-300 hover:underline underline-offset-4 cursor-pointer transition-colors">$ whoami</a>
           </div>
           <p className="mt-2 text-white text-xs sm:text-sm md:text-base">
             <b>Ayush Mandowara</b> | New Delhi, India<br />
@@ -168,7 +168,7 @@ export default function AboutPage() {
         {/* Education Section */}
         <ShellBox id="education">
           <div className="flex justify-between items-center">
-            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ cat education.txt</p>
+            <a href="#education" className="text-green-400 text-sm sm:text-base md:text-lg font-mono hover:text-green-300 hover:underline underline-offset-4 cursor-pointer transition-colors">$ cat education.txt</a>
           </div>
           <div className="mt-6 space-y-6">
             {education.map((edu, index) => (
@@ -202,7 +202,7 @@ export default function AboutPage() {
         {/* Tools Section */}
         <ShellBox id="skills">
           <div className="flex justify-between items-center">
-            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ printenv | grep --skills</p>
+            <a href="#skills" className="text-green-400 text-sm sm:text-base md:text-lg font-mono hover:text-green-300 hover:underline underline-offset-4 cursor-pointer transition-colors">$ printenv | grep --skills</a>
           </div>
           <div className="mt-3 space-y-4">
             {toolGroups.map(group => (

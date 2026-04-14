@@ -132,7 +132,7 @@ export default function ExperiencePage() {
         {/* Work Experience Section */}
         <ShellBox id="experience">
           <div className="flex justify-between items-center">
-            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">$ ls ~/career/</p>
+            <a href="#experience" className="text-green-400 text-sm sm:text-base md:text-lg font-mono hover:text-green-300 hover:underline underline-offset-4 cursor-pointer transition-colors">$ ls ~/career/</a>
           </div>
           <p className="mt-3 text-neutral-300 text-xs sm:text-sm">
             Over 7+ years of building and scaling AI/ML systems across startups and enterprises. From hands-on ML engineering to technical project management, my journey spans the full spectrum of AI product development — from ideation and prototyping to production deployment and continuous optimization.

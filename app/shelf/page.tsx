@@ -194,7 +194,7 @@ const DigitalShelf = () => {
                 {/* Blog Section */}
                 <ShellBox id="blogs">
           <div className="flex justify-between items-center">
-            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/blogs</p>
+            <a href="#blogs" className="text-green-400 text-sm sm:text-base md:text-lg font-mono hover:text-green-300 hover:underline underline-offset-4 cursor-pointer transition-colors">cd ~/shelf/blogs</a>
           </div>
           <div className="mt-8">
             {blogPosts.length === 0 ? (
@@ -277,7 +277,7 @@ const DigitalShelf = () => {
         {/* YouTube Section */}
         <ShellBox id="videos">
           <div className="flex justify-between items-center">
-            <p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">cd ~/shelf/videos</p>
+            <a href="#videos" className="text-green-400 text-sm sm:text-base md:text-lg font-mono hover:text-green-300 hover:underline underline-offset-4 cursor-pointer transition-colors">cd ~/shelf/videos</a>
           </div>
           <div className="mt-8">
             {/* Featured Playlists - always visible */}

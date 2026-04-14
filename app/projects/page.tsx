@@ -135,9 +135,9 @@ export default function ProjectsPage() {
 
 				<ShellBox>
 					<div className="flex justify-between items-center">
-						<p className="text-green-400 text-sm sm:text-base md:text-lg font-mono">
+						<a href="#" className="text-green-400 text-sm sm:text-base md:text-lg font-mono hover:text-green-300 hover:underline underline-offset-4 cursor-pointer transition-colors">
 							$ ls ~/projects/
-						</p>
+						</a>
 					</div>
 
 					<p className="mt-3 text-neutral-300 text-xs sm:text-sm">

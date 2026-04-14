@@ -116,9 +116,9 @@ export default function Accomplishments() {
         <ShellBox>
         <div className="flex justify-between items-center">
             <div className="flex items-center gap-1 sm:gap-2">
-                <p className="text-green-400 text-xs sm:text-sm md:text-base font-mono">
+                <a href="#" className="text-green-400 text-xs sm:text-sm md:text-base font-mono hover:text-green-300 hover:underline underline-offset-4 cursor-pointer transition-colors">
                 $ ls -t ~/accomplishments/
-                </p>
+                </a>
                 <span className="relative group inline-flex items-center">
                 {/* Tooltip ABOVE */}
                 <span
