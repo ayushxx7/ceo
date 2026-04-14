@@ -43,7 +43,8 @@ const LINES = [
 
 // Easter egg responses
 const EASTER_EGGS: Record<string, string> = {
-  'help': '🔍 Try: about, experience, projects, accomplishments, shelf, contact, hire, coffee, matrix, sudo, clear',
+  'help': '🔍 Try: about, experience, projects, accomplishments, shelf, skills, contact, hire, coffee, matrix, sudo, clear',
+  'skills': '🛠️ Core Skills:\n  GenAI, LLMs, RAG, NLP\n  Python, AWS, GCP, Kubernetes, CrewAI',
   'about': '📄 Navigating to /about...',
   'experience': '💼 Navigating to /experience...',
   'projects': '🚀 Navigating to /projects...',
@@ -109,7 +110,8 @@ const NAV_ROUTES: Record<string, string> = {
   'accomplishments': '/accomplishments',
   'shelf': '/shelf',
   'ls': '/projects',
-  'sl': '/projects', // typo bonus
+  'sl': '/projects',
+  'skills': '/about#skills',
 };
 
 // Sub-commands for cat and cd
@@ -256,6 +258,21 @@ export default function Terminal() {
       }
       // Show the easter egg for bare 'cat'
       return EASTER_EGGS['cat']
+    }
+
+    // Handle multi-word command aliases
+    const multiWordAliases: Record<string, string> = {
+      'core skills': 'skills',
+      'core-skills': 'skills',
+      'core': 'skills',
+      'stack': 'skills',
+      'tech stack': 'skills',
+      'techstack': 'skills',
+    }
+    if (multiWordAliases[lower]) {
+      const target = multiWordAliases[lower]
+      router.push(NAV_ROUTES[target])
+      return EASTER_EGGS[target]
     }
     
     // Handle navigation commands

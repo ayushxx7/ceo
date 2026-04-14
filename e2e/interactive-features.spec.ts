@@ -120,6 +120,41 @@ test.describe('Interactive Terminal Features', () => {
     await expect(page).toHaveURL(/.*\/about#skills/);
   });
 
+  test('should respond to "skills" command with skills output', async ({ page }) => {
+    const input = page.locator('input[aria-label="Terminal input"]');
+    await input.fill('skills');
+    await input.press('Enter');
+
+    await expect(page.getByText(/Core Skills/)).toBeVisible();
+    await expect(page.getByText(/GenAI, LLMs, RAG, NLP/)).toBeVisible();
+    await expect(page.getByText(/Python, AWS, GCP, Kubernetes, CrewAI/)).toBeVisible();
+  });
+
+  test('should respond to "core skills" alias and navigate to /about#skills', async ({ page }) => {
+    const input = page.locator('input[aria-label="Terminal input"]');
+    await input.fill('core skills');
+    await input.press('Enter');
+
+    await expect(page.getByText(/Core Skills/)).toBeVisible();
+    await expect(page).toHaveURL(/.*\/about#skills/);
+  });
+
+  test('should respond to "stack" alias', async ({ page }) => {
+    const input = page.locator('input[aria-label="Terminal input"]');
+    await input.fill('stack');
+    await input.press('Enter');
+
+    await expect(page.getByText(/Core Skills/)).toBeVisible();
+  });
+
+  test('should respond to "core" alias', async ({ page }) => {
+    const input = page.locator('input[aria-label="Terminal input"]');
+    await input.fill('core');
+    await input.press('Enter');
+
+    await expect(page.getByText(/Core Skills/)).toBeVisible();
+  });
+
   test('should navigate to /about with "cd about"', async ({ page }) => {
     const input = page.locator('input[aria-label="Terminal input"]');
     await input.fill('cd about');
