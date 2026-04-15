@@ -38,6 +38,19 @@ npm run lint       # Lint check
 npm run test:e2e  # Run E2E tests
 ```
 
+## Screenshots
+
+### Terminal (Home)
+![Terminal](docs/screenshots/terminal.png)
+
+### About Page
+![About](docs/screenshots/about.png)
+
+### Experience Page
+![Experience](docs/screenshots/experience.png)
+
+---
+
 ## Deploy
 
 Deployed on Vercel - push to main and it auto-deploys.
