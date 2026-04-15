@@ -40,14 +40,14 @@ npm run test:e2e  # Run E2E tests
 
 ## Screenshots
 
-### Terminal (Home)
-![Terminal](screenshots/readme-screens/portfolio-welcome-terminal.png)
-
 ### Welcome Card
 ![Welcome Card](screenshots/readme-screens/portfolio-welcome-card.png)
 
 ### Terminal Commands
 ![Terminal Commands](screenshots/readme-screens/portfolio-terminal-commands.png)
+
+### Terminal (Home)
+![Terminal](screenshots/readme-screens/portfolio-welcome-terminal.png)
 
 ### About Page
 ![About](screenshots/readme-screens/portfolio-skills-overview.png)
