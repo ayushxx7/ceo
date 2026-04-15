@@ -41,13 +41,13 @@ npm run test:e2e  # Run E2E tests
 ## Screenshots
 
 ### Terminal (Home)
-![Terminal](docs/screenshots/terminal.png)
+![Terminal](screenshots/homepage.png)
 
 ### About Page
-![About](docs/screenshots/about.png)
+![About](screenshots/about.png)
 
 ### Experience Page
-![Experience](docs/screenshots/experience.png)
+![Experience](screenshots/experience.png)
 
 ---
 
