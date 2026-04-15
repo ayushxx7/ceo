@@ -41,13 +41,28 @@ npm run test:e2e  # Run E2E tests
 ## Screenshots
 
 ### Terminal (Home)
-![Terminal](screenshots/new%20screens/Screenshot%202026-04-14%20at%203.17.35%20PM.png)
+![Terminal](screenshots/readme-screens/portfolio-welcome-terminal.png)
+
+### Welcome Card
+![Welcome Card](screenshots/readme-screens/portfolio-welcome-card.png)
+
+### Terminal Commands
+![Terminal Commands](screenshots/readme-screens/portfolio-terminal-commands.png)
 
 ### About Page
-![About](screenshots/new%20screens/Screenshot%202026-04-14%20at%201.45.42%20PM.png)
+![About](screenshots/readme-screens/portfolio-skills-overview.png)
 
 ### Experience Page
-![Experience](screenshots/new%20screens/Screenshot%202026-04-14%20at%201.37.33%20PM.png)
+![Experience](screenshots/readme-screens/portfolio-terminal-fun-apps.png)
+
+### Projects Page
+![Projects](screenshots/readme-screens/portfolio-projects.png)
+
+### Accomplishments Page
+![Accomplishments](screenshots/readme-screens/portfolio-accomplishments.png)
+
+### Shelf Page
+![Shelf](screenshots/readme-screens/portfolio-shelf.png)
 
 ---
 
