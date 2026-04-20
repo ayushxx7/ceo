@@ -10,21 +10,12 @@
 
 **CEO** is a high-fidelity, terminal-themed portfolio built with Next.js and Framer Motion. It features a fully interactive command-line interface that doubles as a navigation system for exploring projects, experience, and skills.
 
+`✅ Interactive Terminal Emulator | ✅ Playwright E2E Verified | ✅ MIT Licensed | ✅ 95/100 Health`
+
 ## 🎬 Showcase Gallery
 | 🏠 Terminal Interface | 📊 Skills Overview |
 | :---: | :---: |
 | ![Terminal](screenshots/readme-screens/portfolio-welcome-terminal.png) | ![Skills](screenshots/readme-screens/portfolio-skills-overview.png) |
-
-## 📊 Repo Health: 95 / 100 (Pristine)
-This project follows modern frontend standards and has exhaustive E2E coverage.
-
-| Category | Item | Status | Score |
-| :--- | :--- | :--- | :--- |
-| **Documentation** | README & LICENSE | ✅ Updated | 15 / 15 |
-| **Security** | Secret Scan & .gitignore | ✅ Secure | 15 / 15 |
-| **Automation** | Playwright E2E & Vite | ✅ Working | 20 / 20 |
-| **Showcase** | High-res UI Screenshots | ✅ Verified | 20 / 20 |
-| **Distribution** | Vercel Auto-Deploy | ✅ Active | 25 / 30 |
 
 ## 🏗 Architecture
 The portfolio uses a server-side rendered Next.js architecture with a client-side state machine for terminal interactions.
