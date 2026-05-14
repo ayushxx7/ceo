@@ -1,43 +1,29 @@
-# ⌨️ Ayush Mandowara Portfolio (CEO)
-**Interactive Terminal-Themed Developer Showcase**
+# Ayush Mandowara Portfolio
 
-[![Tested on Gemini](https://img.shields.io/badge/Tested_on-Gemini_CLI-8E44AD?style=for-the-badge&logo=google-gemini&logoColor=white)](https://github.com/google/gemini-cli)
-[![Tech Stack: Next.js](https://img.shields.io/badge/Next.js-15+-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-[![UI: Tailwind](https://img.shields.io/badge/UI-Tailwind_4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+A terminal-themed portfolio website built with Next.js. Features an interactive terminal emulator with command navigation.
 
-[![Live App](https://img.shields.io/badge/Live_App-Click_Here_to_Explore-blue?style=for-the-badge&logo=vercel)](https://ayush-mandowara.vercel.app/)
+## 🎬 Showcase
 
-**CEO** is a high-fidelity, terminal-themed portfolio built with Next.js and Framer Motion. It features a fully interactive command-line interface that doubles as a navigation system for exploring projects, experience, and skills.
+| 📟 Demo (GIF) | 🖥️ Desktop | 📱 Mobile |
+|:---:|:---:|:---:|
+| ![Demo](showcase/demo.gif) | ![Desktop](showcase/landing_desktop.png) | ![Mobile](showcase/landing_mobile.png) |
 
-`✅ Interactive Terminal Emulator | ✅ Playwright E2E Verified | ✅ MIT Licensed | ✅ 95/100 Health`
+## Tech Stack
 
-## 🎬 Showcase Gallery
-| 🏠 Terminal Interface | 📊 Skills Overview |
-| :---: | :---: |
-| ![Terminal](screenshots/readme-screens/portfolio-welcome-terminal.png) | ![Skills](screenshots/readme-screens/portfolio-skills-overview.png) |
+- **Next.js 16** - App framework
+- **React 19** - UI library
+- **Tailwind CSS 4** - Styling
+- **Framer Motion** - Animations
+- **Playwright** - E2E testing
 
-## 🏗 Architecture
-The portfolio uses a server-side rendered Next.js architecture with a client-side state machine for terminal interactions.
+## Getting Started
 
-```mermaid
-graph TD
-    A[User] --> B[Next.js App Router]
-    B --> C[Terminal Controller]
-    C --> D[Command Parser]
-    D --> E[Navigation State]
-    E --> F[Experience/Projects Pages]
-    B --> G[Framer Motion Animations]
-    B --> H[Tailwind 4 Styling]
+```bash
+npm install
+npm run dev
 ```
 
-### Core Components
-- **Terminal Controller (`components/`)**: Manages the input/output buffer and command execution logic.
-- **Command Parser**: Distills natural language inputs into navigation triggers or informational outputs.
-- **Content Layer (`app/`)**: Modular pages for Experience, Projects, and Accomplishments, optimized for SEO.
-- **Automation Hub (`e2e/`)**: Comprehensive Playwright test suite for validating navigation and terminal responsiveness.
-
-## ⌨️ Terminal Commands
+## Terminal Commands
 
 - `help` - Show available commands
 - `about` - Navigate to about page
@@ -60,14 +46,14 @@ npm run test:e2e  # Run E2E tests
 
 ## Screenshots
 
+### Terminal (Home)
+![Terminal](screenshots/readme-screens/portfolio-welcome-terminal.png)
+
 ### Welcome Card
 ![Welcome Card](screenshots/readme-screens/portfolio-welcome-card.png)
 
 ### Terminal Commands
 ![Terminal Commands](screenshots/readme-screens/portfolio-terminal-commands.png)
-
-### Terminal (Home)
-![Terminal](screenshots/readme-screens/portfolio-welcome-terminal.png)
 
 ### About Page
 ![About](screenshots/readme-screens/portfolio-skills-overview.png)
@@ -89,3 +75,7 @@ npm run test:e2e  # Run E2E tests
 ## Deploy
 
 Deployed on Vercel - push to main and it auto-deploys.
+
+## License
+
+MIT
